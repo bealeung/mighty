@@ -58,7 +58,6 @@ public class SearchExerciseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_exercise);
-        setTitle("");
 
         resultsListView = (ListView) findViewById(R.id.resultsListView);
         adapter = new ExerciseSearchResultAdapter(getApplicationContext(), exercises);

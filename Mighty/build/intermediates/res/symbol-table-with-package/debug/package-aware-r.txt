@@ -695,6 +695,10 @@ drawable abc_textfield_default_mtrl_alpha
 drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
+drawable abs
+drawable add_white
+drawable biceps
+drawable calves
 drawable cast_album_art_placeholder
 drawable cast_album_art_placeholder_large
 drawable cast_expanded_controller_actionbar_bg_gradient_light
@@ -740,6 +744,7 @@ drawable cast_ic_notification_stop_live_stream
 drawable cast_mini_controller_gradient_light
 drawable cast_mini_controller_img_placeholder
 drawable cast_mini_controller_progress_drawable
+drawable chest
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_disabled
@@ -782,6 +787,9 @@ drawable common_plus_signin_btn_text_light_disabled
 drawable common_plus_signin_btn_text_light_focused
 drawable common_plus_signin_btn_text_light_normal
 drawable common_plus_signin_btn_text_light_pressed
+drawable deltoids
+drawable glutes
+drawable hamstrings
 drawable ic_cast_dark
 drawable ic_cast_disabled_light
 drawable ic_cast_light
@@ -821,10 +829,12 @@ drawable mr_ic_play_light
 drawable mr_ic_settings_dark
 drawable mr_ic_settings_light
 drawable notification_template_icon_bg
+drawable obliques
 drawable places_ic_clear
 drawable places_ic_search
 drawable powered_by_google_dark
 drawable powered_by_google_light
+drawable quads
 drawable quantum_ic_art_track_grey600_48
 drawable quantum_ic_cast_connected_white_24
 drawable quantum_ic_cast_white_36
@@ -866,6 +876,7 @@ drawable quantum_ic_volume_mute_white_36
 drawable quantum_ic_volume_off_grey600_36
 drawable quantum_ic_volume_off_white_36
 drawable red_circle
+drawable triceps
 drawable trophy
 id action0
 id action_bar
@@ -883,7 +894,9 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id activity_chooser_view_content
+id addButton
 id addExerciseButton
+id addImageView
 id adjust_height
 id adjust_width
 id alertTitle

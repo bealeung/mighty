@@ -7,10 +7,12 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 package com.parse.mighty;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void addLogView(final String name, String JSON, int count) {
+    public void addLogView(final String name, String JSON, int count, int id) {
         try {
             JSONObject logObj = new JSONObject(JSON);
-            String id = logObj.getString("id");
+            String exId = logObj.getString("id");
             JSONArray sets = logObj.getJSONArray("sets");
 
             LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             final TextView detailsTextView = (TextView) convertView.findViewById(R.id.detailsTextView);
 
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
-            query.getInBackground(id, new GetCallback<ParseObject>() {
+            query.getInBackground(exId, new GetCallback<ParseObject>() {
                 @Override
                 public void done(ParseObject object, ParseException e) {
                     if (e == null && object != null) {
@@ -92,12 +94,27 @@ public class MainActivity extends AppCompatActivity {
 
             convertView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
-                public boolean onLongClick(View v) {
-                    TextView letterTextView = (TextView) v.findViewById(R.id.letterTextView);
-                    Log.i("Long click!", letterTextView.getText().toString());
-                    return false;
+                public boolean onLongClick(final View v) {
+//                    TextView letterTextView = (TextView) v.findViewById(R.id.letterTextView);
+                    Log.i("Long click!", v.getTag().toString());
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("Are you sure you want to delete?")
+                            .setMessage("This will delete all sets for this exercise!")
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    logDatabase.execSQL("DELETE FROM logs WHERE id = " + v.getTag().toString());
+                                    workoutLinearLayout.removeView(v);
+                                }
+                            })
+                            .setNegativeButton("Cancel", null)
+                            .show();
+
+
+                    return true;
                 }
             });
+            convertView.setTag(id);
             workoutLinearLayout.addView(convertView);
 
         } catch (Exception e) {
@@ -132,10 +149,11 @@ public class MainActivity extends AppCompatActivity {
             while (c != null) {
                 String name = c.getString(nameIndex);
                 String logJSONString = c.getString(logIndex);
-                Log.i("Id", c.getString(idIndex));
+                int id = c.getInt(idIndex);
+                Log.i("Id", String.valueOf(id));
                 Log.i("Name", name);
                 Log.i("JSON", logJSONString);
-                addLogView(name, logJSONString, count);
+                addLogView(name, logJSONString, count, id);
 
                 c.moveToNext();
                 count++;
@@ -164,8 +182,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         workoutLinearLayout = (LinearLayout) findViewById(R.id.workoutLinearLayout);
-
-        setTitle("");
 
         populateWorkout();
 
