@@ -64,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
         return workout;
     }
 
+    public void relabelExerciseOrder() {
+        for (int i = 0; i < workoutLinearLayout.getChildCount(); i++) {
+            View child = workoutLinearLayout.getChildAt(i);
+            final TextView letterTextView = (TextView) child.findViewById(R.id.letterTextView);
+            letterTextView.setText(String.valueOf((char) (65+i)));
+
+        }
+    }
+
 
     public void addLogView(final String name, String JSON, int count, int id) {
         try {
@@ -88,14 +97,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            letterTextView.setText(String.valueOf((char) (65+count)));
+            letterTextView.setText(String.valueOf((char) (65+workoutLinearLayout.getChildCount())));
             // TODO: fix hardcoding rep from first set
-            detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps ");
+            detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps • " + sets.getJSONObject(0).getInt("percentage") + "%");
 
             convertView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(final View v) {
-//                    TextView letterTextView = (TextView) v.findViewById(R.id.letterTextView);
                     Log.i("Long click!", v.getTag().toString());
                     new AlertDialog.Builder(MainActivity.this)
                             .setTitle("Are you sure you want to delete?")
@@ -105,12 +113,11 @@ public class MainActivity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     logDatabase.execSQL("DELETE FROM logs WHERE id = " + v.getTag().toString());
                                     workoutLinearLayout.removeView(v);
+                                    relabelExerciseOrder();
                                 }
                             })
                             .setNegativeButton("Cancel", null)
                             .show();
-
-
                     return true;
                 }
             });

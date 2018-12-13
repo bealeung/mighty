@@ -35,13 +35,13 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     public void addExercise (View view) {
         EditText setsText = (EditText) findViewById(R.id.setsEditText);
         EditText repsText = (EditText) findViewById(R.id.repsEditText);
-        EditText weightText = (EditText) findViewById(R.id.weightEditText);
+        EditText percentageText = (EditText) findViewById(R.id.percentageEditText);
         Log.i("empty", String.valueOf(setsText.getText().toString().trim().length()));
         if (setsText.getText().toString().trim().length() == 0 || repsText.getText().toString().trim().length() == 0) {
             Toast.makeText(this, "You must enter a value for sets and reps", Toast.LENGTH_SHORT).show();
         } else {
             ExerciseLog log = new ExerciseLog(exId, exName);
-            log.addSets(getInt(setsText), getInt(repsText), getInt(weightText));
+            log.addSets(getInt(setsText), getInt(repsText), getInt(percentageText));
             try {
                 Log.i("JSON", log.toJSONString());
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);

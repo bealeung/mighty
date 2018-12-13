@@ -58,12 +58,12 @@
             tools:layout_editor_absoluteY="80dp" />
 
         <EditText
-            android:id="@+id/weightEditText"
+            android:id="@+id/percentageEditText"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Weight"
+            android:hint="Percentage"
             android:inputType="number"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="80dp" />

@@ -1037,6 +1037,7 @@ id packed
 id parent
 id parentPanel
 id percent
+id percentageEditText
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
 id place_autocomplete_prediction_primary_text
@@ -1128,7 +1129,6 @@ id topPanel
 id up
 id url
 id useLogo
-id weightEditText
 id wide
 id withText
 id workoutLinearLayout

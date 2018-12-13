@@ -52,7 +52,7 @@ public class ExerciseLog implements Serializable {
             for (Set s : this.sets) {
                 JSONObject set = new JSONObject();
                 set.put("reps", s.getReps());
-                set.put("weight", s.getPercentage());
+                set.put("percentage", s.getPercentage());
                 sets.put(set);
             }
             obj.put("sets", sets);
