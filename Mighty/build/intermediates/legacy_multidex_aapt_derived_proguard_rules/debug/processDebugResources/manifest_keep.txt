@@ -1,0 +1,2 @@
+# Referenced at /Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:38
+-keep class com.parse.mighty.StarterApplication { <init>(...); }
