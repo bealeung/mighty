@@ -9,7 +9,7 @@ MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /Users/b
 MERGED from [com.google.android.gms:play-services-cast:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-9.4.0.aar/bbb5a7bd0f9fcfee776d218b14c9cddf/AndroidManifest.xml:16:1-20:12
 MERGED from [com.android.support:mediarouter-v7:23.0.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/cb1b5062b329ad34082e737e7252edfa/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:multidex:1.0.2] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/c8c75a15364632273449334cec497f57/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:multidex:1.0.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.0.aar/e94ab92d8144b0eeb8bb352ba76cc3e9/AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d491e4b6d539490326846df12a8091b5/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.4.0.aar/94806d10e28a5af8e358ebca48aba26b/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-ads:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-ads-9.4.0.aar/d5d85a67d92fd7da1c97302232c8db9a/AndroidManifest.xml:16:1-20:12
@@ -277,8 +277,8 @@ MERGED from [com.android.support:mediarouter-v7:23.0.0] /Users/beatrixleung/.gra
 MERGED from [com.android.support:mediarouter-v7:23.0.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/cb1b5062b329ad34082e737e7252edfa/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:multidex:1.0.2] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/c8c75a15364632273449334cec497f57/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/c8c75a15364632273449334cec497f57/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.0.aar/e94ab92d8144b0eeb8bb352ba76cc3e9/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/multidex-1.0.0.aar/e94ab92d8144b0eeb8bb352ba76cc3e9/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d491e4b6d539490326846df12a8091b5/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d491e4b6d539490326846df12a8091b5/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.4.0.aar/94806d10e28a5af8e358ebca48aba26b/AndroidManifest.xml:5:5-44

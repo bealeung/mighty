@@ -5,6 +5,7 @@
     android:id="@+id/logLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
     android:background="@color/cast_expanded_controller_progress_text_color"
     android:orientation="vertical"
     android:padding="5dp">
@@ -57,9 +58,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/industry_demi"
                     android:text="Exercise Name"
                     android:textColor="@color/cast_intro_overlay_background_color"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/detailsTextView"
@@ -67,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Details"
-                    android:textColor="@color/cast_intro_overlay_background_color" />
+                    android:textColor="@color/cast_intro_overlay_background_color"
+                    android:textSize="12sp" />
             </LinearLayout>
 
         </LinearLayout>

@@ -12,6 +12,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorAccent">@color/Main_Red</item>
+        <item name="android:fontFamily">@font/industry_book_font</item>
     </style>
 
 </resources>

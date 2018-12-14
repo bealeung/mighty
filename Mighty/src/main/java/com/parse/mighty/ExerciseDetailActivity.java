@@ -62,7 +62,6 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_detail);
 
         Intent intent = getIntent();
-        setTheme(R.style.AppTheme);
 
         exName = intent.getStringExtra("name");
 
