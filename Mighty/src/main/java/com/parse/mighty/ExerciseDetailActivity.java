@@ -16,6 +16,8 @@ import com.parse.ParseQuery;
 import com.parse.mighty.classes.Exercise;
 import com.parse.mighty.classes.ExerciseLog;
 
+import org.w3c.dom.Text;
+
 
 public class ExerciseDetailActivity extends AppCompatActivity {
 
@@ -60,9 +62,12 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_detail);
 
         Intent intent = getIntent();
+        setTheme(R.style.AppTheme);
 
         exName = intent.getStringExtra("name");
-        setTitle(exName);
+
+        TextView exerciseNameTextView = (TextView) findViewById(R.id.exerciseNameTextView);
+        exerciseNameTextView.setText(exName);
 
         // GET EXERCISE DETAILS
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");

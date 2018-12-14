@@ -6,107 +6,259 @@
     android:layout_height="match_parent"
     tools:context=".ExerciseDetailActivity">
 
-    <Button
-        android:id="@+id/addExerciseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginBottom="463dp"
-        android:background="@color/Main_Red"
-        android:onClick="addExercise"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/repLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/circle_red" />
 
-    <LinearLayout
-        android:id="@+id/repLayout"
+    <TextView
+        android:id="@+id/letterTextView2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="A1"
+        android:textColor="@color/cast_expanded_controller_progress_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/titleBarColour"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/Main_Blue" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/arrow_back_white"
+        app:layout_constraintStart_toStartOf="@id/titleBarColour"
+        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
+
+    <ImageView
+        android:id="@+id/favouriteButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:padding="2dp"
+        android:src="@drawable/favourite_outline_white"
+        app:layout_constraintEnd_toEndOf="@id/titleBarColour"
+        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
+
+    <TextView
+        android:id="@+id/exerciseNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="Exercise Name"
+        android:textColor="@color/cast_expanded_controller_text_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/setSelectionLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:background="@color/cast_expanded_controller_progress_text_color"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:background="@color/cast_expanded_controller_text_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/titleBarColour">
 
-        <EditText
-            android:id="@+id/setsEditText"
-            android:layout_width="100dp"
+        <LinearLayout
+            android:id="@+id/repLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Sets"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="80dp" />
+            android:background="@color/cast_expanded_controller_progress_text_color"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <EditText
-            android:id="@+id/repsEditText"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Reps"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="80dp" />
+            <EditText
+                android:id="@+id/setsEditText"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="Sets"
+                android:inputType="number"
+                android:textColor="@color/cast_expanded_controller_background_color"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="80dp" />
 
-        <EditText
-            android:id="@+id/percentageEditText"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Percentage"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="80dp" />
+            <EditText
+                android:id="@+id/repsEditText"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Reps"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="80dp" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/percentageEditText"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="% RM"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="80dp" />
 
-    <LinearLayout
-        android:id="@+id/detailsSelectorLayout"
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/exerciseDetailsSelectors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        app:layout_constraintTop_toBottomOf="@id/repLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="120dp">
+        app:layout_constraintTop_toBottomOf="@id/setSelectionLayout">
 
-        <TextView
-            android:id="@+id/exerciseInfoSelector"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/detailsSelectorLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Exercise Info"
-            tools:typeface="normal" />
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/historySelector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="History"
-            tools:typeface="normal" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/statsSelector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Stats"
-            tools:typeface="normal" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/exerciseInfoSelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Exercise Info"
+                    android:textColor="@color/cast_expanded_controller_background_color"
+                    android:textStyle="bold"
+                    tools:typeface="normal" />
+
+                <ImageView
+                    android:id="@+id/exerciseInfoUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@color/Main_Red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/historySelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="History"
+                    tools:typeface="normal" />
+
+                <ImageView
+                    android:id="@+id/historyUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:srcCompat="@color/Main_Red" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statsSelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Stats"
+                    tools:typeface="normal" />
+
+                <ImageView
+                    android:id="@+id/statsUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:srcCompat="@color/Main_Red" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/exerciseDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/cast_expanded_controller_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exerciseDetailsSelectors">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/addConstraint"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp"
+        android:onClick="addExercise"
+        app:layout_constraintEnd_toEndOf="@id/titleBarColour"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/redCircleImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/circle_red" />
+
+        <ImageView
+            android:id="@+id/whiteTickImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/tick_white" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

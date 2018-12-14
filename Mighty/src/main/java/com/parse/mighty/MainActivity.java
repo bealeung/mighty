@@ -171,6 +171,14 @@ public class MainActivity extends AppCompatActivity {
             detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps • " + sets.getJSONObject(0).getInt("percentage") + "%");
             View clayout = logView.findViewById(R.id.exerciseConstraintLayout);
             clayout.setTag(childId);
+            clayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), ExerciseDetailActivity.class);
+                    intent.putExtra("name", name);
+                    startActivity(intent);
+                }
+            });
             clayout.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

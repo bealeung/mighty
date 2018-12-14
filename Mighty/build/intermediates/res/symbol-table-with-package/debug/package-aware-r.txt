@@ -699,6 +699,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abs
 drawable add_white
+drawable arrow_back_white
 drawable arrow_down_black
 drawable arrow_up_black
 drawable biceps
@@ -793,6 +794,7 @@ drawable common_plus_signin_btn_text_light_focused
 drawable common_plus_signin_btn_text_light_normal
 drawable common_plus_signin_btn_text_light_pressed
 drawable deltoids
+drawable favourite_outline_white
 drawable glutes
 drawable hamstrings
 drawable ic_cast_dark
@@ -880,6 +882,7 @@ drawable quantum_ic_volume_mute_grey600_36
 drawable quantum_ic_volume_mute_white_36
 drawable quantum_ic_volume_off_grey600_36
 drawable quantum_ic_volume_off_white_36
+drawable tick_white
 drawable triceps
 drawable trophy
 id action0
@@ -899,7 +902,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id activity_chooser_view_content
 id addButton
-id addExerciseButton
+id addConstraint
 id addImageView
 id adjust_height
 id adjust_width
@@ -913,6 +916,7 @@ id art
 id audio_empty_message
 id audio_list_view
 id auto
+id backButton
 id background_image_view
 id background_place_holder_image_view
 id barrier
@@ -981,10 +985,14 @@ id end_text
 id enterWeightEditText
 id exerciseConstraintLayout
 id exerciseDetailsLayout
+id exerciseDetailsSelectors
 id exerciseInfoSelector
+id exerciseInfoUnderline
+id exerciseNameTextView
 id exerciseTextView
 id expand_activities_button
 id expanded_menu
+id favouriteButton
 id gone
 id google_wallet_classic
 id google_wallet_grayscale
@@ -992,6 +1000,7 @@ id google_wallet_monochrome
 id grayscale
 id groups
 id historySelector
+id historyUnderline
 id holo_dark
 id holo_light
 id home
@@ -999,6 +1008,7 @@ id homeAsUp
 id html
 id hybrid
 id icon
+id icon2
 id icon_only
 id icon_uri
 id icon_view
@@ -1016,6 +1026,7 @@ id invisible
 id large_icon_uri
 id left
 id letterTextView
+id letterTextView2
 id light
 id line1
 id line3
@@ -1062,6 +1073,7 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id redCircleImageView
 id repLayout
 id repsEditText
 id repsTextView
@@ -1091,6 +1103,7 @@ id seek_bar_controls
 id select_dialog_listview
 id selectionDetails
 id setDetailsHorizontalLayout
+id setSelectionLayout
 id setsEditText
 id settings
 id shortcut
@@ -1110,6 +1123,7 @@ id standard
 id start
 id start_text
 id statsSelector
+id statsUnderline
 id status_bar_latest_event_content
 id status_text
 id stop
@@ -1132,6 +1146,7 @@ id text_list_view
 id thing_proto
 id time
 id title
+id titleBarColour
 id title_bar
 id title_template
 id title_view
@@ -1141,6 +1156,7 @@ id topPanel
 id up
 id url
 id useLogo
+id whiteTickImageView
 id wide
 id withText
 id workoutLinearLayout

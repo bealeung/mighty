@@ -231,14 +231,12 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/
 MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/support-v4-23.4.0.aar/221b800eeb10e14d715dc48d1c955b18/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:21:9-41
-	android:windowSoftInputMode
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:23:9-52
 	android:icon
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:19:9-35
 	android:theme
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:22:9-65
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:22:9-40
 	android:name
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:18:9-59
 activity#com.parse.mighty.MainActivity
