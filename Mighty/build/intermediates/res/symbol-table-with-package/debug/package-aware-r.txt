@@ -407,10 +407,12 @@ color abc_secondary_text_material_dark
 color abc_secondary_text_material_light
 color accent_material_dark
 color accent_material_light
+color background_color
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color border_grey
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -496,6 +498,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color transparent
 color wallet_bright_foreground_disabled_holo_light
 color wallet_bright_foreground_holo_dark
 color wallet_bright_foreground_holo_light
@@ -511,6 +514,7 @@ color wallet_holo_blue_light
 color wallet_link_text_light
 color wallet_primary_text_holo_light
 color wallet_secondary_text_holo_dark
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_default_height_material
 dimen abc_action_bar_default_padding_end_material
@@ -703,6 +707,7 @@ drawable arrow_back_white
 drawable arrow_down_black
 drawable arrow_up_black
 drawable biceps
+drawable border_grey
 drawable calves
 drawable cast_album_art_placeholder
 drawable cast_album_art_placeholder_large
@@ -885,6 +890,8 @@ drawable quantum_ic_volume_off_white_36
 drawable tick_white
 drawable triceps
 drawable trophy
+font aaux
+font aaux_regular
 font industry_book
 font industry_book_font
 font industry_demi
@@ -1106,6 +1113,7 @@ id seek_bar
 id seek_bar_controls
 id select_dialog_listview
 id selectionDetails
+id setConstraint
 id setDetailsHorizontalLayout
 id setSelectionLayout
 id setsEditText

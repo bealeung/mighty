@@ -5,15 +5,16 @@
     android:id="@+id/logLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/AppTheme"
-    android:background="@color/cast_expanded_controller_progress_text_color"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:theme="@style/AppTheme">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/exerciseConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_grey"
+        android:padding="5dp">
 
         <LinearLayout
             android:id="@+id/exerciseDetailsLayout"

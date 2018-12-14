@@ -8,42 +8,62 @@
     android:background="@color/light_shade_background"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/setDetailsHorizontalLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/setConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
 
-
-        <TextView
-            android:id="@+id/repsTextView"
-            android:layout_width="100dp"
+        <LinearLayout
+            android:id="@+id/setDetailsHorizontalLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12 reps"
-            android:textColor="@color/cast_expanded_controller_background_color" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/repsTextView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="12 reps"
+                android:textColor="@color/cast_expanded_controller_background_color"
+                android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/percentageTextView"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80%"
-            android:textColor="@color/cast_expanded_controller_background_color" />
+            <TextView
+                android:id="@+id/percentageTextView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="80%"
+                android:textColor="@color/cast_expanded_controller_background_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/enterWeightEditText"
             style="@android:style/Widget.EditText"
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:ems="10"
+            android:gravity="center_vertical|center"
             android:inputType="number"
+            android:textColor="@color/cast_expanded_controller_background_color"
             android:textColorLink="@color/Main_Blue"
-            android:textColor="@color/cast_expanded_controller_background_color" />
-    </LinearLayout>
+            android:textSize="14sp"
+            android:fontFamily="@font/aaux_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/setConstraint"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
 
 </LinearLayout>

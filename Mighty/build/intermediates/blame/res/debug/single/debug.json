@@ -2380,6 +2380,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-9.4.0.aar/2c909afe79e406472cdf499e86660c31/res/drawable-mdpi-v4/quantum_ic_replay_10_white_24.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/font_aaux_regular.ttf.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/font/aaux_regular.ttf"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/0ea0772b3e362e02cd4efb60fc3b0a14/res/drawable/common_google_signin_btn_text_dark.xml"
     },
@@ -2406,6 +2410,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_moreoverflow_mtrl_alpha.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_border_grey.xml.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/border_grey.xml"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -2566,6 +2574,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_quantum_ic_forward_30_white_36.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-9.4.0.aar/2c909afe79e406472cdf499e86660c31/res/drawable-xxxhdpi-v4/quantum_ic_forward_30_white_36.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/font_aaux.xml.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/font/aaux.xml"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_plusone_standard_off_client.png.flat",

@@ -13,6 +13,7 @@
         <!-- Customize your theme here. -->
         <item name="colorAccent">@color/Main_Red</item>
         <item name="android:fontFamily">@font/industry_book_font</item>
+        <item name="android:windowBackground">@color/background_color</item>
     </style>
 
 </resources>
