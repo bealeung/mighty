@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_shade_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/setDetailsHorizontalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/repsTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12 reps"
+            android:textColor="@color/cast_expanded_controller_background_color" />
+
+        <TextView
+            android:id="@+id/percentageTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="80%"
+            android:textColor="@color/cast_expanded_controller_background_color" />
+
+        <EditText
+            android:id="@+id/enterWeightEditText"
+            style="@android:style/Widget.EditText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textColorLink="@color/Main_Blue" />
+    </LinearLayout>
+
+</LinearLayout>

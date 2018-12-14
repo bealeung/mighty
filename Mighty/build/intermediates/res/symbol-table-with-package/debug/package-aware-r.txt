@@ -389,6 +389,7 @@ bool abc_config_actionMenuItemAllCaps
 bool abc_config_allowActionMenuItemTextWithIcon
 bool abc_config_closeDialogWhenTouchOutside
 bool abc_config_showMenuShortcutsWhenKeyboardPresent
+color Main_Blue
 color Main_Red
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
@@ -456,6 +457,7 @@ color highlighted_text_material_dark
 color highlighted_text_material_light
 color hint_foreground_material_dark
 color hint_foreground_material_light
+color light_shade_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -697,6 +699,8 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abs
 drawable add_white
+drawable arrow_down_black
+drawable arrow_up_black
 drawable biceps
 drawable calves
 drawable cast_album_art_placeholder
@@ -745,6 +749,7 @@ drawable cast_mini_controller_gradient_light
 drawable cast_mini_controller_img_placeholder
 drawable cast_mini_controller_progress_drawable
 drawable chest
+drawable circle_red
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_disabled
@@ -875,7 +880,6 @@ drawable quantum_ic_volume_mute_grey600_36
 drawable quantum_ic_volume_mute_white_36
 drawable quantum_ic_volume_off_grey600_36
 drawable quantum_ic_volume_off_white_36
-drawable red_circle
 drawable triceps
 drawable trophy
 id action0
@@ -974,6 +978,9 @@ id email
 id end
 id end_padder
 id end_text
+id enterWeightEditText
+id exerciseConstraintLayout
+id exerciseDetailsLayout
 id exerciseInfoSelector
 id exerciseTextView
 id expand_activities_button
@@ -1015,6 +1022,7 @@ id line3
 id listMode
 id list_item
 id loading_indicator
+id logLinearLayout
 id logo_only
 id main_container
 id match_global_nicknames
@@ -1038,6 +1046,7 @@ id parent
 id parentPanel
 id percent
 id percentageEditText
+id percentageTextView
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
 id place_autocomplete_prediction_primary_text
@@ -1055,6 +1064,7 @@ id progress_horizontal
 id radio
 id repLayout
 id repsEditText
+id repsTextView
 id resultsListView
 id rfc822
 id right
@@ -1080,11 +1090,13 @@ id seek_bar
 id seek_bar_controls
 id select_dialog_listview
 id selectionDetails
+id setDetailsHorizontalLayout
 id setsEditText
 id settings
 id shortcut
 id showCustom
 id showHome
+id showSetsButton
 id showTitle
 id slide
 id spacer
@@ -1195,6 +1207,7 @@ layout search_listview
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout set_listview
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 raw gtm_analytics

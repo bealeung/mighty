@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="Main_Red">#d32f2f</color>
+    <color name="light_shade_background">#f3f6f7</color>
+    <color name="Main_Blue">#00416b</color>
 </resources>
