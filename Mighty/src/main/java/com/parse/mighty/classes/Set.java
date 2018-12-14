@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Set implements Serializable {
     int reps;
     int percentage;
+    int completed;
 
     public Set (int reps, int percentage) {
         this.reps = reps;
@@ -16,6 +17,14 @@ public class Set implements Serializable {
     }
     public int getPercentage() {
         return percentage;
+    }
+
+    public int getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(int completed) {
+        this.completed = completed;
     }
 
 

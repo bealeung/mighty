@@ -53,6 +53,8 @@ public class ExerciseLog implements Serializable {
                 JSONObject set = new JSONObject();
                 set.put("reps", s.getReps());
                 set.put("percentage", s.getPercentage());
+                set.put("completed", s.getCompleted());
+
                 sets.put(set);
             }
             obj.put("sets", sets);

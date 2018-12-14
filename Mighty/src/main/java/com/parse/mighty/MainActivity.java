@@ -7,6 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 package com.parse.mighty;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -15,9 +16,12 @@ import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,6 +44,7 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     LinearLayout workoutLinearLayout;
     SQLiteDatabase logDatabase;
+    JSONObject currLogs = new JSONObject();
 
     public void showSets(View v) {
         String childId = v.getTag().toString();
@@ -50,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("number children", String.valueOf(logLinearLayout.getChildCount()));
         int numChildren = logLinearLayout.getChildCount();
-        String id = logView.getTag().toString();
+        final String id = logView.getTag().toString();
         if (numChildren == 1) {
             try {
                 Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE id =" + id, null);
@@ -58,21 +63,54 @@ public class MainActivity extends AppCompatActivity {
                     c.moveToFirst();
                     int logIndex = c.getColumnIndex("log");
                     String JSON = c.getString(logIndex);
-                    JSONObject logObj = new JSONObject(JSON);
+                    final JSONObject logObj = new JSONObject(JSON);
                     String exId = logObj.getString("id");
-                    JSONArray sets = logObj.getJSONArray("sets");
+                    final JSONArray sets = logObj.getJSONArray("sets");
                     Log.i("Number of sets", String.valueOf(sets.length()));
 
                     for (int i = 0; i < sets.length(); i++) {
-                        JSONObject currSet = sets.getJSONObject(0);
+                        final int setId = i;
+                        final JSONObject currSet = sets.getJSONObject(i);
 
                         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
                         final View setView = inflater.inflate(R.layout.set_listview, null);
 
                         final TextView repsTextView = (TextView) setView.findViewById(R.id.repsTextView);
                         final TextView percentageTextView = (TextView) setView.findViewById(R.id.percentageTextView);
+                        final EditText weightEditText = (EditText) setView.findViewById(R.id.enterWeightEditText);
                         repsTextView.setText(String.valueOf(currSet.getInt("reps")) + " reps");
                         percentageTextView.setText(String.valueOf(currSet.getInt("percentage")) + " %");
+                        if (currSet.has("completed")) {
+                            weightEditText.setText(String.valueOf(currSet.getInt("completed")));
+                        }
+                        weightEditText.addTextChangedListener(new TextWatcher() {
+                            @Override
+                            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                            }
+
+                            @Override
+                            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                Log.i("log id", String.valueOf(id));
+                                try {
+                                    currSet.put("completed", s);
+                                    sets.put(setId, currSet);
+                                    logObj.put("sets", sets);
+                                    ContentValues cv = new ContentValues();
+                                    cv.put("log", logObj.toString());
+                                    logDatabase.update("logs", cv, "id=" + id, null);
+
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void afterTextChanged(Editable s) {
+
+                            }
+                        });
+                        setView.setTag(setId);
                         logLinearLayout.addView(setView);
                     }
                     showSetsButton.setImageResource(R.drawable.arrow_up_black);
@@ -103,9 +141,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void addLogView(final String name, String JSON, int id) {
+    public void addLogView(final String name, String JSON, int logId) {
         try {
             JSONObject logObj = new JSONObject(JSON);
+            currLogs.putOpt(String.valueOf(logId), logObj);
             String exId = logObj.getString("id");
             JSONArray sets = logObj.getJSONArray("sets");
             int childId = workoutLinearLayout.getChildCount();
@@ -126,17 +165,6 @@ public class MainActivity extends AppCompatActivity {
             });
 
             logTextView.setText(name);
-
-//            ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
-//            query.getInBackground(exId, new GetCallback<ParseObject>() {
-//                @Override
-//                public void done(ParseObject object, ParseException e) {
-//                    if (e == null && object != null) {
-//                        logTextView.setText(object.getString("name"));
-//                        Log.i("Success", name);
-//                    }
-//                }
-//            });
 
             letterTextView.setText(String.valueOf((char) (65+childId)));
             // TODO: fix hardcoding rep from first set
@@ -165,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            logView.setTag(id);
+            logView.setTag(logId);
             workoutLinearLayout.addView(logView);
 
         } catch (Exception e) {
@@ -200,11 +228,9 @@ public class MainActivity extends AppCompatActivity {
             while (c != null) {
                 String name = c.getString(nameIndex);
                 String logJSONString = c.getString(logIndex);
-                int id = c.getInt(idIndex);
-                Log.i("Id", String.valueOf(id));
-                Log.i("Name", name);
-                Log.i("JSON", logJSONString);
-                addLogView(name, logJSONString, id);
+                int logId = c.getInt(idIndex);
+
+                addLogView(name, logJSONString, logId);
 
                 c.moveToNext();
                 count++;
@@ -220,8 +246,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
 
-         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
 
 //        logDatabase.execSQL("DROP TABLE IF EXISTS logs");
 
