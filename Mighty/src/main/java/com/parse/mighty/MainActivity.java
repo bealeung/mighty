@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout workoutLinearLayout;
     SQLiteDatabase logDatabase;
     JSONObject currLogs = new JSONObject();
+    long currDateLong;
 
     public void showSets(View v) {
         String childId = v.getTag().toString();
@@ -76,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
                         final View setView = inflater.inflate(R.layout.set_listview, null);
 
                         final TextView repsTextView = (TextView) setView.findViewById(R.id.repsTextView);
-                        final TextView percentageTextView = (TextView) setView.findViewById(R.id.percentageTextView);
+                        final TextView loadTextView = (TextView) setView.findViewById(R.id.loadTextView);
                         final EditText weightEditText = (EditText) setView.findViewById(R.id.enterWeightEditText);
                         repsTextView.setText(String.valueOf(currSet.getInt("reps")) + " reps");
-                        percentageTextView.setText(String.valueOf(currSet.getInt("percentage")) + " %");
+                        loadTextView.setText(String.valueOf(currSet.getInt("load")) + " %");
                         if (currSet.has("completed")) {
                             weightEditText.setText(String.valueOf(currSet.getInt("completed")));
                         }
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
             letterTextView.setText(String.valueOf((char) (65+childId)));
             // TODO: fix hardcoding rep from first set
-            detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps • " + sets.getJSONObject(0).getInt("percentage") + "%");
+            detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps • " + sets.getJSONObject(0).getInt("load") + "%");
             View clayout = logView.findViewById(R.id.exerciseConstraintLayout);
             clayout.setTag(childId);
             clayout.setOnClickListener(new View.OnClickListener() {
@@ -212,10 +213,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addLogToDatabase(String logJSONString) {
-        String date = new Date().toString();
         try {
             JSONObject logJSON = new JSONObject(logJSONString);
-            logDatabase.execSQL("INSERT INTO logs (date, name, log) VALUES ('" + date + "', '" + logJSON.getString("name") + "', '" + logJSONString +"')");
+            logDatabase.execSQL("INSERT INTO logs (date, name, log) VALUES ('" + currDateLong + "', '" + logJSON.getString("name") + "', '" + logJSONString +"')");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -254,12 +254,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        currDateLong = new Date().getTime();
+
+
         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
 
 
 //        logDatabase.execSQL("DROP TABLE IF EXISTS logs");
 
-        logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date VARCHAR, name VARCHAR, log VARCHAR, id INTEGER PRIMARY KEY)");
+        logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date INTEGER, name VARCHAR, log VARCHAR, id INTEGER PRIMARY KEY)");
         Intent intent = getIntent();
         String newLog = intent.getStringExtra("log");
         if (newLog != null) {

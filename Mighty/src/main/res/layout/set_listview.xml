@@ -34,7 +34,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/percentageTextView"
+                android:id="@+id/loadTextView"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,12 +53,12 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/aaux_regular"
             android:gravity="center_vertical|center"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textColor="@color/cast_expanded_controller_background_color"
             android:textColorLink="@color/Main_Blue"
             android:textSize="14sp"
-            android:fontFamily="@font/aaux_regular"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/setConstraint"
             app:layout_constraintTop_toTopOf="parent" />

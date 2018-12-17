@@ -1037,12 +1037,13 @@ id invisible
 id large_icon_uri
 id left
 id letterTextView
-id letterTextView2
 id light
 id line1
 id line3
+id linearLayout
 id listMode
 id list_item
+id loadTextView
 id loading_indicator
 id logLinearLayout
 id logo_only
@@ -1068,7 +1069,6 @@ id parent
 id parentPanel
 id percent
 id percentageEditText
-id percentageTextView
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
 id place_autocomplete_prediction_primary_text
@@ -1098,7 +1098,9 @@ id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id searchBarLayout
 id searchEditText
+id searchName
 id search_badge
 id search_bar
 id search_button

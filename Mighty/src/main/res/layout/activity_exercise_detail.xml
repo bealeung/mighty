@@ -12,20 +12,12 @@
         android:layout_height="35dp"
         android:src="@drawable/circle_red" />
 
-    <TextView
-        android:id="@+id/letterTextView2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="A1"
-        android:textColor="@color/cast_expanded_controller_progress_text_color"
-        android:textSize="14sp" />
-
     <ImageView
         android:id="@+id/titleBarColour"
         android:layout_width="0dp"
         android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/Main_Blue" />
@@ -35,8 +27,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/arrow_back_white"
         app:layout_constraintStart_toStartOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
@@ -45,7 +36,7 @@
         android:id="@+id/favouriteButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:padding="2dp"
         android:src="@drawable/favourite_outline_white"
@@ -54,19 +45,20 @@
 
     <TextView
         android:id="@+id/exerciseNameTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="249dp"
         android:layout_height="30dp"
 
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         android:gravity="center_vertical"
         android:text="Exercise Name"
         android:textColor="@color/cast_expanded_controller_text_color"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/favouriteButton"
         app:layout_constraintStart_toEndOf="@id/backButton"
-        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/setSelectionLayout"

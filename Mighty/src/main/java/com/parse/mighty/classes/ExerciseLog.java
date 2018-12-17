@@ -18,13 +18,13 @@ public class ExerciseLog implements Serializable {
     }
 
     public void addSet(int reps, int percentage) {
-        Set s = new Set(reps, percentage);
+        Set s = new Set(reps, percentage, "percentage");
         sets.add(s);
     }
     public void addSets (int num, int reps, int percentage) {
         int count = 0;
         while (count < num) {
-            Set s = new Set(reps, percentage);
+            Set s = new Set(reps, percentage, "percentage");
             sets.add(s);
             count++;
         }
@@ -52,9 +52,11 @@ public class ExerciseLog implements Serializable {
             for (Set s : this.sets) {
                 JSONObject set = new JSONObject();
                 set.put("reps", s.getReps());
-                set.put("percentage", s.getPercentage());
-                set.put("completed", s.getCompleted());
+                set.put("load", s.getLoad());
+                if (s.getCompleted() != -1) {
+                    set.put("completed", s.getCompleted());
 
+                }
                 sets.put(set);
             }
             obj.put("sets", sets);

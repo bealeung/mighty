@@ -4,20 +4,24 @@ import java.io.Serializable;
 
 public class Set implements Serializable {
     int reps;
-    int percentage;
+    int load;
+    String loadType;
     int completed;
 
-    public Set (int reps, int percentage) {
+    public Set (int reps, int load, String loadType) {
         this.reps = reps;
-        this.percentage = percentage;
+        this.load = load;
+        this.loadType = loadType;
+        this.completed = -1;
     }
 
     public int getReps() {
         return reps;
     }
-    public int getPercentage() {
-        return percentage;
+    public int getLoad() {
+        return load;
     }
+    public String getLoadType() { return loadType; };
 
     public int getCompleted() {
         return completed;
@@ -30,7 +34,7 @@ public class Set implements Serializable {
 
     @Override
     public String toString() {
-        return reps + " x " +percentage;
+        return reps + " x " + load;
     }
 
 }
