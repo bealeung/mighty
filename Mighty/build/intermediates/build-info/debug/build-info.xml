@@ -5,26 +5,27 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="FIELD_ADDED"
     plugin-version="3.2.1"
-    timestamp="1545028406332"
+    timestamp="1545037734449"
     token="-2325061347358321373"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="284" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="59" />
     <task
         name="verifier"
-        duration="0" />
+        duration="10" />
 
     <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
 
     <build
@@ -74,8 +75,11 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1545027835314"
+        timestamp="1545036869279"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
@@ -85,16 +89,14 @@
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1545028406332"
+        ir-eligibility="FIELD_ADDED"
+        timestamp="1545037734449"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
     </build>
 

@@ -24,6 +24,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     Exercise ex;
     String exName;
     String exId;
+    long date;
 
     public int getInt(TextView t) {
         int ret = 0;
@@ -47,6 +48,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             try {
                 Log.i("JSON", log.toJSONString());
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.putExtra("date", date);
                 intent.putExtra("log", log.toJSONString());
                 startActivity(intent);
             } catch (Exception e) {
@@ -64,6 +66,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         exName = intent.getStringExtra("name");
+        date = intent.getLongExtra("date", 0);
 
         TextView exerciseNameTextView = (TextView) findViewById(R.id.exerciseNameTextView);
         exerciseNameTextView.setText(exName);

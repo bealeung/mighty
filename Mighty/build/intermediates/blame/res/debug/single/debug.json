@@ -2520,6 +2520,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/cb1b5062b329ad34082e737e7252edfa/res/drawable-mdpi/ic_media_route_on_mono_dark.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_forward_black.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_forward_black.png"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_voice_search_api_mtrl_alpha.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png"
     },
@@ -2974,6 +2978,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_back_black.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_back_black.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",

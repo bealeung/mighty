@@ -13,7 +13,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -26,18 +25,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.parse.GetCallback;
 import com.parse.ParseAnalytics;
-
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-import com.parse.mighty.classes.ExerciseLog;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -45,7 +39,27 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout workoutLinearLayout;
     SQLiteDatabase logDatabase;
     JSONObject currLogs = new JSONObject();
-    long currDateLong;
+    Date currDate;
+    SimpleDateFormat curFormatter = new SimpleDateFormat("dd/MM/yyyy");
+
+    public void prevDay (View v) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(currDate);
+        c.add(Calendar.DATE, -1);
+        currDate = c.getTime();
+        updateDateDisplay();
+        populateWorkout();
+    }
+
+    public void nextDay (View v) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(currDate);
+        c.add(Calendar.DATE, 1);
+        currDate = c.getTime();
+        updateDateDisplay();
+        populateWorkout();
+    }
+
 
     public void showSets(View v) {
         String childId = v.getTag().toString();
@@ -129,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addExercise(View view) {
         Intent intent = new Intent(getApplicationContext(), SearchExerciseActivity.class);
+        intent.putExtra("date", currDate.getTime());
         startActivity(intent);
     }
 
@@ -215,16 +230,25 @@ public class MainActivity extends AppCompatActivity {
     public void addLogToDatabase(String logJSONString) {
         try {
             JSONObject logJSON = new JSONObject(logJSONString);
-            logDatabase.execSQL("INSERT INTO logs (date, name, log) VALUES ('" + currDateLong + "', '" + logJSON.getString("name") + "', '" + logJSONString +"')");
+            logDatabase.execSQL("INSERT INTO logs (date, name, log) VALUES ('" + currDate.getTime() + "', '" + logJSON.getString("name") + "', '" + logJSONString +"')");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void populateWorkout() {
-        try {
-            Cursor c = logDatabase.rawQuery("SELECT * FROM logs", null);
+        workoutLinearLayout.removeAllViewsInLayout();
+        Log.i("CALENDAR", String.valueOf(currDate));
+        String startStr = currDate.getDate() + "/" + String.valueOf(currDate.getMonth()+1) + "/" + String.valueOf(currDate.getYear()+1900);
+        String endStr = String.valueOf(currDate.getDate()+1) + "/" + String.valueOf(currDate.getMonth()+1) + "/" + String.valueOf(currDate.getYear()+1900);
+        Log.i("START", startStr);
+        Log.i("END", endStr);
 
+        try {
+            Date startObj = curFormatter.parse(startStr);
+            Date endObj = curFormatter.parse(endStr);
+            Log.i("PARSED", String.valueOf(startObj) + " " + String.valueOf(endObj));
+            Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE date > " + startObj.getTime() + " AND date < " + endObj.getTime(), null);
             int dateIndex = c.getColumnIndex("date");
             int nameIndex = c.getColumnIndex("name");
             int idIndex = c.getColumnIndex("id");
@@ -234,12 +258,11 @@ public class MainActivity extends AppCompatActivity {
 
             int count = 0;
             while (c != null) {
+                Log.i("LOG DATE", c.getString(dateIndex));
                 String name = c.getString(nameIndex);
                 String logJSONString = c.getString(logIndex);
                 int logId = c.getInt(idIndex);
-
                 addLogView(name, logJSONString, logId);
-
                 c.moveToNext();
                 count++;
             }
@@ -249,21 +272,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void updateDateDisplay() {
+        int year = currDate.getYear()+1990;
+        int month = currDate.getMonth()+1;
+        int day = currDate.getDate();
+        TextView dateTextView = (TextView) findViewById(R.id.dateTextView);
+        dateTextView.setText(day + "/" + month);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        currDateLong = new Date().getTime();
-
 
         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
 
 
+        Intent intent = getIntent();
+
+        long date = intent.getLongExtra("date", 0);
+
+        if (date != 0) {
+            currDate = new Date(date);
+        } else {
+            currDate = Calendar.getInstance().getTime();
+        }
+        updateDateDisplay();
+
 //        logDatabase.execSQL("DROP TABLE IF EXISTS logs");
 
         logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date INTEGER, name VARCHAR, log VARCHAR, id INTEGER PRIMARY KEY)");
-        Intent intent = getIntent();
         String newLog = intent.getStringExtra("log");
         if (newLog != null) {
             addLogToDatabase(newLog);

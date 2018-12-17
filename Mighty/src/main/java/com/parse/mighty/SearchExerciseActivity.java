@@ -18,6 +18,7 @@ import com.parse.ParseQuery;
 import com.parse.mighty.classes.Exercise;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SearchExerciseActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
     EditText searchEditText;
     ArrayList<Exercise> exercises = new ArrayList<>();
     ExerciseSearchResultAdapter adapter;
+    long date;
 
 
     public void getSearch(String searchTerm) {
@@ -59,6 +61,9 @@ public class SearchExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_exercise);
 
+        Intent intent = getIntent();
+        date = intent.getLongExtra("date", 0);
+
         resultsListView = (ListView) findViewById(R.id.resultsListView);
         adapter = new ExerciseSearchResultAdapter(getApplicationContext(), exercises);
         resultsListView.setAdapter(adapter);
@@ -89,6 +94,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), ExerciseDetailActivity.class);
                 intent.putExtra("name", exercises.get(position).getName());
+                intent.putExtra("date", date);
                 startActivity(intent);
             }
         });
