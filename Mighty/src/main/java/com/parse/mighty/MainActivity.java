@@ -237,6 +237,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void populateWorkout() {
+
+        // TODO: Change workout name at top
         workoutLinearLayout.removeAllViewsInLayout();
         Log.i("CALENDAR", String.valueOf(currDate));
         String startStr = currDate.getDate() + "/" + String.valueOf(currDate.getMonth()+1) + "/" + String.valueOf(currDate.getYear()+1900);

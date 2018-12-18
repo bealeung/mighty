@@ -888,6 +888,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-plus-9.4.0.aar/8c635bdae97c5c09f3e36e6875a21bc9/res/drawable-tvdpi-v4/ic_plusone_standard_off_client.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_calendar_white.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/calendar_white.png"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_pressed.9.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/0ea0772b3e362e02cd4efb60fc3b0a14/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png"
     },
@@ -1026,6 +1030,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/layout_abc_action_menu_item_layout.xml.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_foward_white.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_foward_white.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_cast_ic_notification_2.png.flat",
@@ -2894,6 +2902,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_blue_oval.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/blue_oval.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",

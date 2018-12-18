@@ -707,9 +707,12 @@ drawable arrow_back_black
 drawable arrow_back_white
 drawable arrow_down_black
 drawable arrow_forward_black
+drawable arrow_foward_white
 drawable arrow_up_black
 drawable biceps
+drawable blue_oval
 drawable border_grey
+drawable calendar_white
 drawable calves
 drawable cast_album_art_placeholder
 drawable cast_album_art_placeholder_large
@@ -935,6 +938,7 @@ id background_image_view
 id background_place_holder_image_view
 id barrier
 id beginning
+id blueOvalImageView
 id book_now
 id bottom
 id button
@@ -1181,6 +1185,7 @@ id whiteTickImageView
 id wide
 id withText
 id workoutLinearLayout
+id workoutNameTextView
 id wrap
 id wrap_content
 integer abc_config_activityDefaultDur
