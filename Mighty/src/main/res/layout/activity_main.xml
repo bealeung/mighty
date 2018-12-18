@@ -14,6 +14,23 @@
     tools:context=".MainActivity">
 
 
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleSelectionLayout">
+
+        <LinearLayout
+            android:id="@+id/workoutLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
     <ImageView
         android:id="@+id/blueOvalImageView"
         android:layout_width="wrap_content"
@@ -26,45 +43,49 @@
         app:srcCompat="@drawable/blue_oval" />
 
     <TextView
-        android:id="@+id/workoutNameTextView"
+        android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="INTENSIFICATION - W1D1"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/industry_demi"
+        android:lineSpacingExtra="2sp"
+        android:text="Today"
         android:textColor="@color/background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/dateSelectionLayout"
+        android:id="@+id/titleSelectionLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/blueOvalImageView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/backImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:onClick="prevDay"
-            app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+            app:layout_constraintEnd_toStartOf="@+id/workoutNameTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/arrow_back_black" />
+            app:srcCompat="@drawable/arrow_back_ios_white" />
 
         <TextView
-            android:id="@+id/dateTextView"
+            android:id="@+id/workoutNameTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/industry_demi"
             android:gravity="center"
-            android:text="21/7"
+            android:text="INTENSIFICATION - W1D1"
+            android:textColor="@color/background_color"
             app:layout_constraintEnd_toStartOf="@id/forwardImageView"
             app:layout_constraintStart_toEndOf="@id/backImageView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,32 +94,16 @@
             android:id="@+id/forwardImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:onClick="nextDay"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/dateTextView"
+            app:layout_constraintStart_toEndOf="@id/workoutNameTextView"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/arrow_forward_black" />
+            app:srcCompat="@drawable/arrow_forward_ios_white" />
 
     </android.support.constraint.ConstraintLayout>
-
-    <ScrollView
-        android:id="@+id/mainScrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateSelectionLayout">
-
-        <LinearLayout
-            android:id="@+id/workoutLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
-    </ScrollView>
 
     <ImageView
         android:id="@+id/addButton"

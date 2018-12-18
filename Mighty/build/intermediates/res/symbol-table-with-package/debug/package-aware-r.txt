@@ -704,9 +704,11 @@ drawable abc_textfield_search_material
 drawable abs
 drawable add_white
 drawable arrow_back_black
+drawable arrow_back_ios_white
 drawable arrow_back_white
 drawable arrow_down_black
 drawable arrow_forward_black
+drawable arrow_forward_ios_white
 drawable arrow_foward_white
 drawable arrow_up_black
 drawable biceps
@@ -760,6 +762,7 @@ drawable cast_mini_controller_gradient_light
 drawable cast_mini_controller_img_placeholder
 drawable cast_mini_controller_progress_drawable
 drawable chest
+drawable circle_outline_red
 drawable circle_red
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -982,7 +985,6 @@ id crash_reporting_present
 id custom
 id customPanel
 id dark
-id dateSelectionLayout
 id dateTextView
 id decor_content_parent
 id default_activity_button
@@ -1172,6 +1174,7 @@ id thing_proto
 id time
 id title
 id titleBarColour
+id titleSelectionLayout
 id title_bar
 id title_template
 id title_view

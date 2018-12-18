@@ -1240,6 +1240,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/cb1b5062b329ad34082e737e7252edfa/res/drawable-xhdpi/ic_cast_off_light.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_back_ios_white.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_back_ios_white.png"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_quads.png.flat",
         "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/quads.png"
     },
@@ -1330,6 +1334,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_ab_back_mtrl_am_alpha.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_circle_outline_red.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/circle_outline_red.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_cast_ic_expanded_controller_skip_previous.xml.flat",
@@ -1726,6 +1734,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_quantum_ic_volume_off_grey600_36.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-9.4.0.aar/2c909afe79e406472cdf499e86660c31/res/drawable-xxhdpi-v4/quantum_ic_volume_off_grey600_36.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_forward_ios_white.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_forward_ios_white.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_quantum_ic_skip_previous_white_36.png.flat",

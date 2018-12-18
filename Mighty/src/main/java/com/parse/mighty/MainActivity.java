@@ -275,11 +275,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateDateDisplay() {
-        int year = currDate.getYear()+1990;
+        TextView dateTextView = (TextView) findViewById(R.id.dateTextView);
+        int year = currDate.getYear();
         int month = currDate.getMonth()+1;
         int day = currDate.getDate();
-        TextView dateTextView = (TextView) findViewById(R.id.dateTextView);
-        dateTextView.setText(day + "/" + month);
+        Date today = Calendar.getInstance().getTime();
+        if (today.getYear() == year
+                && today.getMonth() == month-1
+                && today.getDate() == day) {
+            dateTextView.setText("Today");
+        } else {
+            dateTextView.setText(day + "/" + month);
+        }
     }
 
 
