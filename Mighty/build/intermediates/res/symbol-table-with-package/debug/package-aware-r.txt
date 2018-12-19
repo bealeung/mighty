@@ -1026,6 +1026,7 @@ id expand_activities_button
 id expanded_menu
 id favouriteButton
 id favouritesTabVertical
+id favouritesTextView
 id favouritesUnderline
 id forwardImageView
 id gone
@@ -1117,7 +1118,6 @@ id repLayout
 id repsEditText
 id repsTextView
 id resultsListView
-id rfavouritesTextView
 id rfc822
 id right
 id route_name

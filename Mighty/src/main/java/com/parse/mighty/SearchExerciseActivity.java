@@ -1,6 +1,7 @@
 package com.parse.mighty;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -30,15 +32,36 @@ public class SearchExerciseActivity extends AppCompatActivity {
     EditText searchEditText;
     ArrayList<Exercise> exercises = new ArrayList<>();
     ExerciseSearchResultAdapter adapter;
+    TextView recentTextView;
+    TextView favouritesTextView;
+    ImageView favouritesUnderline;
+    ImageView recentUnderline;
+
     long date;
+    String currTab = "recent";
+
 
 
     public void getFavourites(View view) {
-
+        if (currTab == "favourites") {
+            return;
+        }
+        favouritesTextView.setAlpha(1);
+        recentTextView.setAlpha((float)0.3);
+        favouritesUnderline.setVisibility(View.VISIBLE);
+        recentUnderline.setVisibility(View.INVISIBLE);
+        currTab = "favourites";
     }
 
     public void getRecent(View view) {
-
+        if (currTab == "recent") {
+            return;
+        }
+        recentTextView.setAlpha(1);
+        favouritesTextView.setAlpha((float)0.3);
+        recentUnderline.setVisibility(View.VISIBLE);
+        favouritesUnderline.setVisibility(View.INVISIBLE);
+        currTab = "recent";
     }
 
 
@@ -81,6 +104,13 @@ public class SearchExerciseActivity extends AppCompatActivity {
         resultsListView = (ListView) findViewById(R.id.resultsListView);
         adapter = new ExerciseSearchResultAdapter(getApplicationContext(), exercises);
         resultsListView.setAdapter(adapter);
+
+        favouritesTextView = (TextView) findViewById(R.id.favouritesTextView);
+        recentTextView = (TextView) findViewById(R.id.recentTextView);
+        favouritesUnderline = (ImageView) findViewById(R.id.favouritesUnderline);
+        recentUnderline = (ImageView) findViewById(R.id.recentUnderline);
+
+
 
         searchEditText = (EditText) findViewById(R.id.searchEditText);
 
