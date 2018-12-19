@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -30,6 +31,15 @@ public class SearchExerciseActivity extends AppCompatActivity {
     ArrayList<Exercise> exercises = new ArrayList<>();
     ExerciseSearchResultAdapter adapter;
     long date;
+
+
+    public void getFavourites(View view) {
+
+    }
+
+    public void getRecent(View view) {
+
+    }
 
 
     public void getSearch(String searchTerm) {
@@ -95,12 +105,15 @@ public class SearchExerciseActivity extends AppCompatActivity {
         searchEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                searchBarLayout.animate().y(20).setDuration(500);
+                searchBarLayout.animate().y(20).setDuration(200);
                 ImageView titleBar = (ImageView) findViewById(R.id.titleBarColour);
-                titleBar.animate().y(-100).setDuration(500);
+                titleBar.animate().y(-100).setDuration(200);
+                ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
+                searchImageView.setImageResource(R.drawable.arrow_back_nav_black);
 
             }
         });
+
 
 
 

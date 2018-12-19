@@ -389,6 +389,7 @@ bool abc_config_actionMenuItemAllCaps
 bool abc_config_allowActionMenuItemTextWithIcon
 bool abc_config_closeDialogWhenTouchOutside
 bool abc_config_showMenuShortcutsWhenKeyboardPresent
+color Black
 color Main_Blue
 color Main_Red
 color abc_background_cache_hint_selector_material_dark
@@ -705,12 +706,14 @@ drawable abs
 drawable add_white
 drawable arrow_back_black
 drawable arrow_back_ios_white
+drawable arrow_back_nav_black
 drawable arrow_back_white
 drawable arrow_down_black
 drawable arrow_forward_black
 drawable arrow_forward_ios_white
 drawable arrow_foward_white
 drawable arrow_up_black
+drawable bench
 drawable biceps
 drawable blue_oval
 drawable border_grey
@@ -807,6 +810,7 @@ drawable common_plus_signin_btn_text_light_disabled
 drawable common_plus_signin_btn_text_light_focused
 drawable common_plus_signin_btn_text_light_normal
 drawable common_plus_signin_btn_text_light_pressed
+drawable deadlift
 drawable deltoids
 drawable favourite_outline_white
 drawable glutes
@@ -896,6 +900,8 @@ drawable quantum_ic_volume_mute_grey600_36
 drawable quantum_ic_volume_mute_white_36
 drawable quantum_ic_volume_off_grey600_36
 drawable quantum_ic_volume_off_white_36
+drawable search_black
+drawable squat
 drawable tick_white
 drawable triceps
 drawable trophy
@@ -941,6 +947,7 @@ id background_image_view
 id background_place_holder_image_view
 id barrier
 id beginning
+id benchImageView
 id blueOvalImageView
 id book_now
 id bottom
@@ -956,6 +963,8 @@ id buyButton
 id buy_now
 id buy_with
 id buy_with_google
+id byLiftLinearLayout
+id byLiftTextView
 id cancel_action
 id cast_button_type_closed_caption
 id cast_button_type_custom
@@ -986,6 +995,7 @@ id custom
 id customPanel
 id dark
 id dateTextView
+id deadliftImageView
 id decor_content_parent
 id default_activity_button
 id default_control_frame
@@ -1015,6 +1025,8 @@ id exerciseTextView
 id expand_activities_button
 id expanded_menu
 id favouriteButton
+id favouritesTabVertical
+id favouritesUnderline
 id forwardImageView
 id gone
 id google_wallet_classic
@@ -1097,11 +1109,15 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id recentTabVertical
+id recentTextView
+id recentUnderline
 id redCircleImageView
 id repLayout
 id repsEditText
 id repsTextView
 id resultsListView
+id rfavouritesTextView
 id rfc822
 id right
 id route_name
@@ -1113,6 +1129,7 @@ id scrollIndicatorUp
 id scrollView
 id searchBarLayout
 id searchEditText
+id searchImageView
 id searchName
 id search_badge
 id search_bar
@@ -1143,6 +1160,7 @@ id spacer
 id split_action_bar
 id spread
 id spread_inside
+id squatImageView
 id src_atop
 id src_in
 id src_over
@@ -1160,6 +1178,7 @@ id subtitle
 id subtitle_view
 id tabMode
 id tab_host
+id tabsLinearLayout
 id terrain
 id test
 id text
@@ -1167,7 +1186,6 @@ id text1
 id text2
 id textSpacerNoButtons
 id textTitle
-id textView
 id text_empty_message
 id text_list_view
 id thing_proto

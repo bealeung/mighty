@@ -7,4 +7,5 @@
     <color name="transparent">#00ffffff</color>
     <color name="white">#ffffff</color>
     <color name="background_color">#fafafa</color>
+    <color name="Black">#000000</color>
 </resources>
