@@ -1,5 +1,6 @@
 package com.parse.mighty;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +12,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -187,12 +189,27 @@ public class SearchExerciseActivity extends AppCompatActivity {
         searchEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                searchBarLayout.animate().y(20).setDuration(200);
-                ImageView titleBar = (ImageView) findViewById(R.id.titleBarColour);
-                titleBar.animate().y(-100).setDuration(200);
-                ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
-                searchImageView.setImageResource(R.drawable.arrow_back_nav_black);
+                if (b) {
+                    searchBarLayout.animate().y(20).setDuration(200);
+                    ImageView titleBar = (ImageView) findViewById(R.id.titleBarColour);
+                    titleBar.animate().y(-100).setDuration(200);
+                    ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
+                    searchImageView.setImageResource(R.drawable.arrow_back_nav_black);
+                    searchImageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            searchBarLayout.animate().y(110).setDuration(200);
+                            ImageView titleBar = (ImageView) findViewById(R.id.titleBarColour);
+                            titleBar.animate().y(0).setDuration(200);
+                            ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
+                            searchImageView.setImageResource(R.drawable.search_black);
+                            InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                            searchEditText.clearFocus();
+                        }
 
+                    });
+                }
             }
         });
 

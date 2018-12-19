@@ -5,26 +5,27 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.2.1"
-    timestamp="1545197307815"
+    timestamp="1545199695443"
     token="-2325061347358321373"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="138" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="44" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
 
     <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
 
     <build
@@ -83,18 +84,25 @@
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1545197307815"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1545199353251"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1545199695443"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
     </build>
 
