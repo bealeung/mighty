@@ -714,6 +714,7 @@ drawable arrow_up_black
 drawable biceps
 drawable blue_oval
 drawable border_grey
+drawable button_add
 drawable calendar_white
 drawable calves
 drawable cast_album_art_placeholder
@@ -922,7 +923,6 @@ id action_mode_close_button
 id activity_chooser_view_content
 id addButton
 id addConstraint
-id addImageView
 id adjust_height
 id adjust_width
 id alertTitle

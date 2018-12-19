@@ -1,6 +1,7 @@
 package com.parse.mighty;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -59,6 +62,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_search_exercise);
 
         Intent intent = getIntent();
@@ -86,6 +90,18 @@ public class SearchExerciseActivity extends AppCompatActivity {
                 getSearch(s.toString());
             }
         });
+        final ConstraintLayout searchBarLayout = (ConstraintLayout) findViewById(R.id.searchBarLayout);
+
+        searchEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                searchBarLayout.animate().y(20).setDuration(500);
+                ImageView titleBar = (ImageView) findViewById(R.id.titleBarColour);
+                titleBar.animate().y(-100).setDuration(500);
+
+            }
+        });
+
 
 
         resultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -115,19 +115,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:onClick="addExercise"
-        android:src="@drawable/circle_red" />
+        android:src="@drawable/button_add" />
 
-    <ImageView
-        android:id="@+id/addImageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="addExercise"
-        android:padding="10dp"
-        android:src="@drawable/add_white" />
+
 
 
 </android.support.constraint.ConstraintLayout>

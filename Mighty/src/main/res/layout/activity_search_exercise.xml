@@ -21,22 +21,10 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/arrow_back_white"
         app:layout_constraintStart_toStartOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
-
-    <ImageView
-        android:id="@+id/favouriteButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="2dp"
-        android:src="@drawable/favourite_outline_white"
-        app:layout_constraintEnd_toEndOf="@id/titleBarColour"
-        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
-
 
 
     <TextView
@@ -45,11 +33,12 @@
         android:layout_height="30dp"
 
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_vertical"
+        android:letterSpacing="0.2"
         android:text="EXERCISES"
         android:textColor="@color/cast_expanded_controller_text_color"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/backButton"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
@@ -60,27 +49,30 @@
         android:layout_height="45dp"
 
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/border_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchName"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
 
-        android:background="@drawable/border_grey">
+        app:layout_constraintTop_toBottomOf="@id/searchName">
 
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="35dp"
             android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
             android:fontFamily="@font/aaux"
             android:hint="Search Exercises"
             android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.026" />
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
 
