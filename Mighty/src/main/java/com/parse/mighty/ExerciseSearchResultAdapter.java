@@ -34,9 +34,11 @@ public class ExerciseSearchResultAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.search_listview, null);
         TextView name = (TextView) convertView.findViewById(R.id.nameTextView);
+        TextView details = (TextView) convertView.findViewById(R.id.detailsTextView);
         ImageView icon = (ImageView) convertView.findViewById(R.id.icon);
         Exercise ex = exercises.get(position);
         name.setText(ex.getName());
+        details.setText(ex.getDetails());
         icon.setImageResource(ex.getImageId());
         return convertView;
     }

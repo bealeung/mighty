@@ -165,7 +165,7 @@
                     android:id="@+id/recentTabVertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="getRecent"
+                    android:onClick="recentTab"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toStartOf="@id/favouritesTabVertical"
                     app:layout_constraintStart_toStartOf="parent">

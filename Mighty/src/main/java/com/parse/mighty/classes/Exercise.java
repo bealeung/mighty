@@ -15,6 +15,12 @@ public class Exercise {
         this.imageId = imageId;
     }
 
+    public Exercise(String name, int imageId, String classification) {
+        this.name = name;
+        this.imageId = imageId;
+        this.classification = classification;
+    }
+
     public Exercise(String id, String name, String target, int imageId, String classficiation, ArrayList<String> details) {
         this.id = id;
         this.name = name;
@@ -30,5 +36,6 @@ public class Exercise {
     public int getImageId() {
         return imageId;
     }
+    public String getDetails() { return classification; }
 
 }

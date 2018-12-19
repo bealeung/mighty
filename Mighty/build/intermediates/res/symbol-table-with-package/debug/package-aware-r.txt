@@ -713,11 +713,14 @@ drawable arrow_forward_black
 drawable arrow_forward_ios_white
 drawable arrow_foward_white
 drawable arrow_up_black
+drawable barbell
 drawable bench
 drawable biceps
 drawable blue_oval
+drawable bodyweight
 drawable border_grey
 drawable button_add
+drawable cable
 drawable calendar_white
 drawable calves
 drawable cast_album_art_placeholder
@@ -812,6 +815,7 @@ drawable common_plus_signin_btn_text_light_normal
 drawable common_plus_signin_btn_text_light_pressed
 drawable deadlift
 drawable deltoids
+drawable dumbbell
 drawable favourite_outline_white
 drawable glutes
 drawable hamstrings
@@ -841,6 +845,8 @@ drawable ic_plusone_standard_off_client
 drawable ic_plusone_tall_off_client
 drawable ic_setting_dark
 drawable ic_setting_light
+drawable kettlebell
+drawable machine
 drawable mr_ic_cast_dark
 drawable mr_ic_cast_light
 drawable mr_ic_media_route_connecting_mono_dark
