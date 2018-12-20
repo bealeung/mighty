@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     JSONObject currLogs = new JSONObject();
     Date currDate;
     SimpleDateFormat curFormatter = new SimpleDateFormat("dd/MM/yyyy");
+    DecimalFormat df = new DecimalFormat("###.##");
+
 
     public void prevDay (View v) {
         Calendar c = Calendar.getInstance();
@@ -91,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
                         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
                         final View setView = inflater.inflate(R.layout.set_listview, null);
-
+                        final TextView idTextView = (TextView) setView.findViewById(R.id.childId);
+                        idTextView.setText(String.valueOf(setId+1));
                         final TextView repsTextView = (TextView) setView.findViewById(R.id.repsTextView);
                         final TextView loadTextView = (TextView) setView.findViewById(R.id.loadTextView);
                         final EditText weightEditText = (EditText) setView.findViewById(R.id.enterWeightEditText);
                         repsTextView.setText(String.valueOf(currSet.getInt("reps")) + " reps");
-                        loadTextView.setText(String.valueOf(currSet.getInt("load")) + " %");
-                        if (currSet.has("completed")) {
-                            DecimalFormat df = new DecimalFormat("###.##");
+                        loadTextView.setText(displaySetLoad(currSet));
+                        if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
                             weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
                         }
                         weightEditText.addTextChangedListener(new TextWatcher() {
@@ -137,14 +139,16 @@ public class MainActivity extends AppCompatActivity {
                         setView.setTag(setId);
                         logLinearLayout.addView(setView);
                     }
-                    showSetsButton.setImageResource(R.drawable.arrow_up_black);
+                    showSetsButton.setImageResource(R.drawable.expand_less_red);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            showSetsButton.setImageResource(R.drawable.arrow_down_black);
-
+            showSetsButton.setImageResource(R.drawable.expand_more_red);
+            View child = workoutLinearLayout.getChildAt(Integer.parseInt(childId));
+            TextView detailsTextView = child.findViewById(R.id.detailsTextView);
+            detailsTextView.setVisibility(View.VISIBLE);
             logLinearLayout.removeViews(1, numChildren-1);
 
         }
@@ -179,11 +183,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public String displaySetLoad(JSONObject currSet) {
+        String ret = "";
+        try {
+            if (currSet.has("load")) {
+                ret = String.valueOf(df.format(currSet.getDouble("load")));
+                ret += " " + currSet.getString("type");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+
     public String getDetails(JSONArray sets ) {
         try {
             String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ ";
             if (sets.getJSONObject(0).has("load")) {
-                details += sets.getJSONObject(0).getDouble("load");
+
+                details += df.format(sets.getJSONObject(0).getDouble("load"));
                 details += " " + sets.getJSONObject(0).getString("type");
             }
             return details;
@@ -237,6 +255,7 @@ public class MainActivity extends AppCompatActivity {
             showSets.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    detailsTextView.setVisibility(View.GONE);
                     showSets(v);
                 }
             });

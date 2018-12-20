@@ -5,63 +5,92 @@
     android:layout_width="match_parent"
     android:theme="@style/AppTheme"
     android:layout_height="wrap_content"
-    android:background="@color/light_shade_background"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/setConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp">
+        android:padding="10dp">
 
-        <LinearLayout
-            android:id="@+id/setDetailsHorizontalLayout"
+
+        <TextView
+            android:id="@+id/childId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:fontFamily="sans-serif"
+            android:text="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <TextView
-                android:id="@+id/repsTextView"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_weight="1"
-                android:text="12 reps"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                android:textSize="14sp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/loadTextView"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="80%"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                android:textSize="14sp" />
+        <TextView
+            android:id="@+id/repsTextView"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="12 reps"
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/loadTextView"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="80%"
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repsTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <EditText
             android:id="@+id/enterWeightEditText"
             style="@android:style/Widget.EditText"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:ems="10"
-            android:fontFamily="@font/aaux_regular"
-            android:gravity="center_vertical|center"
+            android:fontFamily="sans-serif"
+            android:gravity="right|center_vertical|center|end"
+            android:hint="0"
             android:inputType="numberDecimal"
-            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textColor="@color/Main_Red"
             android:textColorLink="@color/Main_Blue"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/setConstraint"
+            app:layout_constraintEnd_toStartOf="@id/loadMeasurement"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/loadMeasurement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingEnd="20dp"
+            android:text="@string/load_measurement"
+
+            android:textColor="@color/Black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/setConstraint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="10dp" />
     </android.support.constraint.ConstraintLayout>
 
 

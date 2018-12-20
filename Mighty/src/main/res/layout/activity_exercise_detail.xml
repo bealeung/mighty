@@ -52,7 +52,6 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/industry_demi"
         android:gravity="center_vertical"
-        android:letterSpacing="0.2"
         android:text="Exercise Name"
         android:textColor="@color/cast_expanded_controller_text_color"
         android:textSize="16sp"

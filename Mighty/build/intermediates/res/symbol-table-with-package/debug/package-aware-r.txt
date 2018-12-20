@@ -818,6 +818,8 @@ drawable common_plus_signin_btn_text_light_pressed
 drawable deadlift
 drawable deltoids
 drawable dumbbell
+drawable expand_less_red
+drawable expand_more_red
 drawable favourite_outline_white
 drawable glutes
 drawable hamstrings
@@ -991,6 +993,7 @@ id cast_notification_id
 id center
 id chains
 id checkbox
+id childId
 id chronometer
 id classic
 id collapseActionView
@@ -1034,6 +1037,7 @@ id exerciseInfoSelector
 id exerciseInfoUnderline
 id exerciseNameTextView
 id exerciseTextView
+id exerciseTitleLayout
 id expand_activities_button
 id expanded_menu
 id favouriteButton
@@ -1079,6 +1083,7 @@ id line3
 id listMode
 id list_item
 id loadEditText
+id loadMeasurement
 id loadTextView
 id loadTypeSelector
 id loading_indicator
@@ -1159,7 +1164,6 @@ id seek_bar_controls
 id select_dialog_listview
 id selectionDetails
 id setConstraint
-id setDetailsHorizontalLayout
 id setIcon
 id setSelectionLayout
 id setsEditText
@@ -1370,6 +1374,7 @@ string common_signin_button_text_long
 string create_calendar_message
 string create_calendar_title
 string decline
+string load_measurement
 string mr_media_route_button_content_description
 string mr_media_route_chooser_searching
 string mr_media_route_chooser_title
