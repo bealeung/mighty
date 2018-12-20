@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="FIELD_ADDED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1545293172113"
+    timestamp="1545294011400"
     token="-2325061347358321373"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="236" />
+        duration="259" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="42" />
+        duration="39" />
     <task
         name="verifier"
-        duration="13" />
+        duration="16" />
 
     <artifact
         location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -98,8 +98,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1545293172113"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1545294011400"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"

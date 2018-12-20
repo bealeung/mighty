@@ -33,6 +33,7 @@ import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
     Date currDate;
     SimpleDateFormat curFormatter = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat df = new DecimalFormat("###.##");
-    HashMap<Integer, Double> repPercentageMap = new HashMap<>();
+    int[] repPercentageArray;
+
 
 
     // https://www.brianmac.co.uk/maxload.htm
@@ -125,10 +127,17 @@ public class MainActivity extends AppCompatActivity {
                         final TextView repsTextView = (TextView) setView.findViewById(R.id.repsTextView);
                         final TextView loadTextView = (TextView) setView.findViewById(R.id.loadTextView);
                         final EditText weightEditText = (EditText) setView.findViewById(R.id.enterWeightEditText);
-                        weightEditText.setHint(String.valueOf(repMax));
+
+
                         final int reps = currSet.getInt("reps");
                         repsTextView.setText(String.valueOf(reps) + " reps");
                         loadTextView.setText(displaySetLoad(currSet));
+
+
+                        double percentage = repPercentageArray[reps-1];
+
+                        weightEditText.setHint(String.valueOf(df.format(repMax*percentage/100)));
+
                         if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
                             weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
                         }
@@ -443,6 +452,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        repPercentageArray = getResources().getIntArray(R.array.rep_percentage);
         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
         recordsDatabase = this.openOrCreateDatabase("Records", MODE_PRIVATE, null);
 
@@ -459,7 +469,7 @@ public class MainActivity extends AppCompatActivity {
         updateDateDisplay();
 
 //        logDatabase.execSQL("DROP TABLE IF EXISTS logs");
-        recordsDatabase.execSQL("DROP TABLE IF EXISTS records");
+//        recordsDatabase.execSQL("DROP TABLE IF EXISTS records");
         logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date INTEGER, name VARCHAR, log VARCHAR, recordIdid INTEGER PRIMARY KEY)");
 
         recordsDatabase.execSQL("CREATE TABLE IF NOT EXISTS records (date INTEGER, exercise VARCHAR, logID INTEGER, repMax INTEGER, numReps INTEGER, id INTEGER PRIMARY KEY)");
