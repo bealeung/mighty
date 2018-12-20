@@ -31,6 +31,7 @@ import com.parse.ParseAnalytics;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -97,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
                         repsTextView.setText(String.valueOf(currSet.getInt("reps")) + " reps");
                         loadTextView.setText(String.valueOf(currSet.getInt("load")) + " %");
                         if (currSet.has("completed")) {
-                            weightEditText.setText(String.valueOf(currSet.getInt("completed")));
+                            DecimalFormat df = new DecimalFormat("###.##");
+                            weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
                         }
                         weightEditText.addTextChangedListener(new TextWatcher() {
                             @Override
