@@ -6,7 +6,7 @@ public class Set implements Serializable {
     int reps;
     double load;
     String loadType;
-    int completed;
+    double completed;
 
     public Set (int reps, double load, String loadType) {
         this.reps = reps;
@@ -23,7 +23,7 @@ public class Set implements Serializable {
     }
     public String getLoadType() { return loadType; };
 
-    public int getCompleted() {
+    public double getCompleted() {
         return completed;
     }
 

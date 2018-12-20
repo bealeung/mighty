@@ -32,10 +32,10 @@
                 android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/icon"
+                    android:id="@+id/setIcon"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/circle_red" />
+                    android:src="@drawable/circle_outline_red" />
 
                 <TextView
                     android:id="@+id/letterTextView"
@@ -43,7 +43,7 @@
                     android:layout_height="35dp"
                     android:gravity="center_vertical|center_horizontal"
                     android:text="A1"
-                    android:textColor="@color/cast_expanded_controller_progress_text_color"
+                    android:textColor="@color/Main_Red"
                     android:textSize="18sp" />
 
             </android.support.constraint.ConstraintLayout>

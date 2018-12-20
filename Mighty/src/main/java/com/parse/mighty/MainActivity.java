@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseAnalytics;
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showSets(View v) {
-        String childId = v.getTag().toString();
+        final String childId = v.getTag().toString();
         Log.i("Show sets with child ID", childId);
         View logView = workoutLinearLayout.getChildAt(Integer.valueOf(childId));
         LinearLayout logLinearLayout = (LinearLayout) logView.findViewById(R.id.logLinearLayout);
@@ -106,15 +107,21 @@ public class MainActivity extends AppCompatActivity {
 
                             @Override
                             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
                                 Log.i("log id", String.valueOf(id));
                                 try {
-                                    currSet.put("completed", s);
+                                    if (s.length() > 0) {
+                                        currSet.put("completed", Double.valueOf(s.toString()));
+
+                                    } else {
+                                        currSet.put("completed", Double.valueOf(-1));
+                                    }
                                     sets.put(setId, currSet);
                                     logObj.put("sets", sets);
                                     ContentValues cv = new ContentValues();
                                     cv.put("log", logObj.toString());
                                     logDatabase.update("logs", cv, "id=" + id, null);
-
+                                    updateCompletion(Integer.parseInt(childId), isCompleted(sets));
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
@@ -138,6 +145,20 @@ public class MainActivity extends AppCompatActivity {
 
             logLinearLayout.removeViews(1, numChildren-1);
 
+        }
+    }
+
+    public void updateCompletion(int childId, boolean completed) {
+        View v = workoutLinearLayout.getChildAt(childId);
+        ImageView circle = (ImageView) v.findViewById(R.id.setIcon);
+        TextView letter = (TextView) v.findViewById(R.id.letterTextView);
+
+        if (completed) {
+            circle.setImageResource(R.drawable.circle_red);
+            letter.setTextColor(getResources().getColor(R.color.white));
+        } else {
+            circle.setImageResource(R.drawable.circle_outline_red);
+            letter.setTextColor(getResources().getColor(R.color.Main_Red));
         }
     }
 
@@ -170,6 +191,27 @@ public class MainActivity extends AppCompatActivity {
         return "";
     }
 
+    public int getNumCompleted(JSONArray sets) {
+        int num = 0;
+        try {
+            for (int i = 0; i < sets.length(); i++) {
+                if (sets.getJSONObject(i).has("completed") && sets.getJSONObject(i).getDouble("completed") != -1 ) {
+                    num++;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return num;
+    }
+
+    public boolean isCompleted(JSONArray sets) {
+        if (sets.length() == getNumCompleted(sets)) {
+            return true;
+        }
+        return false;
+    }
+
 
     public void addLogView(final String name, String JSON, int logId) {
         try {
@@ -178,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
             String exId = logObj.getString("id");
             JSONArray sets = logObj.getJSONArray("sets");
             int childId = workoutLinearLayout.getChildCount();
-
             LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
             final View logView = inflater.inflate(R.layout.log_listview, null);
             final TextView logTextView = (TextView) logView.findViewById(R.id.exerciseTextView);
@@ -186,6 +227,10 @@ public class MainActivity extends AppCompatActivity {
             final TextView detailsTextView = (TextView) logView.findViewById(R.id.detailsTextView);
 
             final ImageView showSets = (ImageView) logView.findViewById(R.id.showSetsButton);
+
+            // getCompleted
+
+
             showSets.setTag(childId);
             showSets.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -233,6 +278,8 @@ public class MainActivity extends AppCompatActivity {
             });
             logView.setTag(logId);
             workoutLinearLayout.addView(logView);
+            updateCompletion(childId, isCompleted(sets));
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -251,7 +298,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void populateWorkout() {
-
         // TODO: Change workout name at top
         workoutLinearLayout.removeAllViewsInLayout();
         Log.i("CALENDAR", String.valueOf(currDate));

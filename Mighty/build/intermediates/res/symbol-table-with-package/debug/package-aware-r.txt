@@ -1160,6 +1160,7 @@ id select_dialog_listview
 id selectionDetails
 id setConstraint
 id setDetailsHorizontalLayout
+id setIcon
 id setSelectionLayout
 id setsEditText
 id settings
