@@ -43,7 +43,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         if (setsText.getText().toString().trim().length() == 0 || repsText.getText().toString().trim().length() == 0) {
             Toast.makeText(this, "You must enter a value for sets and reps", Toast.LENGTH_SHORT).show();
         } else {
-            ExerciseLog log = new ExerciseLog(exId, exName);
+            ExerciseLog log = new ExerciseLog(exId, exName, ex.getClassification(), ex.getEquipment(), ex.getTarget());
             log.addSets(getInt(setsText), getInt(repsText), getInt(percentageText));
             try {
                 Log.i("JSON", log.toJSONString());
@@ -79,7 +79,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             public void done(ParseObject object, ParseException e) {
                 if (e == null && object != null) {
                     int id = getResources().getIdentifier(object.getString("target").toLowerCase(), "drawable", getPackageName());
-                    ex = new Exercise(object.getString("name"), id);
+                    ex = new Exercise(object.getString("name"), id, object.getString("classification"), object.getString("equipment"));
                     exId = object.getObjectId();
                 }
             }

@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="0dp"
@@ -34,10 +35,10 @@
 
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/industry_demi"
         android:gravity="center_vertical"
         android:letterSpacing="0.2"
         android:text="EXERCISES"
-        android:fontFamily="@font/industry_demi"
         android:textColor="@color/cast_expanded_controller_text_color"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -87,150 +88,179 @@
             app:layout_constraintTop_toTopOf="@id/searchBarLayout" />
     </android.support.constraint.ConstraintLayout>
 
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@id/constraintLayout">
+
+        <ListView
+            android:id="@+id/resultsListView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:foregroundGravity="top"
+            app:layout_constraintBottom_toBottomOf="@id/searchLayout"
+            app:layout_constraintEnd_toEndOf="@id/searchLayout"
+            app:layout_constraintStart_toStartOf="@id/searchLayout"
+            app:layout_constraintTop_toTopOf="@id/searchLayout"
+            app:layout_constraintVertical_bias="0.469">
+
+        </ListView>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@id/titleBarColour">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/byLiftTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/industry_demi"
+            android:text="BY LIFT"
+            android:textColor="@color/Black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/byLiftLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainLayout" />
 
-            <TextView
-                android:id="@+id/byLiftTextView"
+        <LinearLayout
+            android:id="@+id/byLiftLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/byLiftTextView">
+
+            <ImageView
+                android:id="@+id/squatImageView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/industry_demi"
-                android:text="BY LIFT"
-                android:textColor="@color/Black"
-                android:textSize="12sp" />
+                android:layout_height="75dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:srcCompat="@drawable/squat" />
+
+            <ImageView
+                android:id="@+id/benchImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:srcCompat="@drawable/bench" />
+
+            <ImageView
+                android:id="@+id/deadliftImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:srcCompat="@drawable/deadlift" />
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/tabsLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/byLiftLinearLayout">
 
             <LinearLayout
-                android:id="@+id/byLiftLinearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
+                android:id="@+id/recentTabVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="recentTab"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/favouritesTabVertical"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/recentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/industry_demi"
+
+                    android:text="RECENT"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp" />
 
                 <ImageView
-                    android:id="@+id/squatImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="75dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/squat" />
-
-                <ImageView
-                    android:id="@+id/benchImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="75dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/bench" />
-
-                <ImageView
-                    android:id="@+id/deadliftImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="75dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/deadlift" />
-
+                    android:id="@+id/recentUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@color/Main_Red" />
             </LinearLayout>
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/tabsLinearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="25dp"
-                android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/favouritesTabVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="getFavourites"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/recentTabVertical">
 
-                <LinearLayout
-                    android:id="@+id/recentTabVertical"
+                <TextView
+                    android:id="@+id/favouritesTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="recentTab"
-                    android:orientation="vertical"
-                    app:layout_constraintEnd_toStartOf="@id/favouritesTabVertical"
-                    app:layout_constraintStart_toStartOf="parent">
+                    android:layout_marginBottom="5dp"
+                    android:alpha=".3"
+                    android:fontFamily="@font/industry_demi"
+                    android:text="FAVOURITES"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp" />
 
-                    <TextView
-                        android:id="@+id/recentTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:fontFamily="@font/industry_demi"
+                <ImageView
+                    android:id="@+id/favouritesUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:srcCompat="@color/Main_Red" />
+            </LinearLayout>
 
-                        android:text="RECENT"
-                        android:textColor="@color/Black"
-                        android:textSize="12sp" />
+        </android.support.constraint.ConstraintLayout>
 
-                    <ImageView
-                        android:id="@+id/recentUnderline"
-                        android:layout_width="25dp"
-                        android:layout_height="2dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@color/Main_Red" />
-                </LinearLayout>
+        <ListView
+            android:id="@+id/tabbedResultsListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/mainLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tabsLinearLayout"
+            app:layout_constraintVertical_bias="0.469">
 
-                <LinearLayout
-                    android:id="@+id/favouritesTabVertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="getFavourites"
-                    android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/recentTabVertical">
+        </ListView>
+    </android.support.constraint.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/favouritesTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:alpha=".3"
-                        android:fontFamily="@font/industry_demi"
-                        android:text="FAVOURITES"
-                        android:textColor="@color/Black"
-                        android:textSize="12sp" />
 
-                    <ImageView
-                        android:id="@+id/favouritesUnderline"
-                        android:layout_width="25dp"
-                        android:layout_height="2dp"
-                        android:layout_gravity="center"
-                        android:visibility="invisible"
-                        app:srcCompat="@color/Main_Red" />
-                </LinearLayout>
-            </android.support.constraint.ConstraintLayout>
 
-            <ListView
-                android:id="@+id/resultsListView"
-                android:layout_width="match_parent"
-                android:layout_height="426dp"
-                android:layout_marginTop="0dp"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/byLiftTextView"
-                app:layout_constraintVertical_bias="0.469">
-
-            </ListView>
-
-        </LinearLayout>
-    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

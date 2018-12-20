@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
             letterTextView.setText(String.valueOf((char) (65+childId)));
             // TODO: fix hardcoding rep from first set
-            detailsTextView.setText(sets.length() + " sets • " + sets.getJSONObject(0).getInt("reps") + " reps • " + sets.getJSONObject(0).getInt("load") + "%");
+            detailsTextView.setText(sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ " + sets.getJSONObject(0).getInt("load") + "%");
             View clayout = logView.findViewById(R.id.exerciseConstraintLayout);
             clayout.setTag(childId);
             clayout.setOnClickListener(new View.OnClickListener() {

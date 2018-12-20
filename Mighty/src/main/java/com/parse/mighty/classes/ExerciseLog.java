@@ -9,11 +9,17 @@ import java.util.ArrayList;
 public class ExerciseLog implements Serializable {
     String exerciseId;
     String exerciseName;
+    String exerciseClassification;
+    String exerciseEquipment;
+    String exerciseTargetMuscle;
     ArrayList<Set> sets;
 
-    public ExerciseLog (String id, String name) {
+    public ExerciseLog (String id, String name, String classification, String equipment, String target) {
         this.exerciseId = id;
         this.exerciseName = name;
+        this.exerciseClassification = classification;
+        this.exerciseEquipment = equipment;
+        this.exerciseTargetMuscle = target;
         sets = new ArrayList<>();
     }
 
@@ -48,6 +54,9 @@ public class ExerciseLog implements Serializable {
         try {
             obj.put("id", exerciseId);
             obj.put("name", exerciseName);
+            obj.put("muscle", exerciseTargetMuscle);
+            obj.put("equipment", exerciseEquipment);
+            obj.put("classification", exerciseClassification);
             JSONArray sets = new JSONArray();
             for (Set s : this.sets) {
                 JSONObject set = new JSONObject();

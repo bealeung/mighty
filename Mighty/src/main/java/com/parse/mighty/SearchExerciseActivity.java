@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.media.Image;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,16 +29,17 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SearchExerciseActivity extends AppCompatActivity {
     ListView resultsListView;
+    ListView tabbedResultsListView;
     EditText searchEditText;
     ArrayList<Exercise> searchResults = new ArrayList<>();
     ArrayList<Exercise> recentResults = new ArrayList<>();
     ArrayList<Exercise> favouriteResults = new ArrayList<>();
-    ExerciseSearchResultAdapter adapter;
+    ExerciseSearchResultAdapter searchAdapter;
+    ExerciseSearchResultAdapter tabbedAdapter;
     TextView recentTextView;
     TextView favouritesTextView;
     ImageView favouritesUnderline;
@@ -60,10 +59,10 @@ public class SearchExerciseActivity extends AppCompatActivity {
         recentTextView.setAlpha((float)0.3);
         favouritesUnderline.setVisibility(View.VISIBLE);
         recentUnderline.setVisibility(View.INVISIBLE);
-        searchResults.clear();
-        searchResults.addAll(favouriteResults);
-        adapter.notifyDataSetChanged();
+        tabbedAdapter = new ExerciseSearchResultAdapter(getApplicationContext(), favouriteResults);
+        tabbedResultsListView.setAdapter(tabbedAdapter);
         currTab = "favourites";
+
     }
 
     public void recentTab(View view) {
@@ -75,36 +74,48 @@ public class SearchExerciseActivity extends AppCompatActivity {
         recentUnderline.setVisibility(View.VISIBLE);
         favouritesUnderline.setVisibility(View.INVISIBLE);
         currTab = "recent";
-        searchResults.clear();
-        searchResults.addAll(recentResults);
-        adapter.notifyDataSetChanged();
+        tabbedAdapter = new ExerciseSearchResultAdapter(getApplicationContext(), recentResults);
+        tabbedResultsListView.setAdapter(tabbedAdapter);
     }
 
     public void getRecent() {
         try {
-            Cursor c = logDatabase.rawQuery("SELECT * FROM logs ORDER BY date DESC LIMIT 2", null);
+            Cursor c = logDatabase.rawQuery("SELECT * FROM logs ORDER BY date DESC LIMIT 10", null);
             if (c != null) {
                 c.moveToFirst();
                 int nameIndex = c.getColumnIndex("name");
+                int logIndex = c.getColumnIndex("log");
 
                 while (c != null) {
                     Log.i("EXERCISE NAME ", c.getString(nameIndex));
-                    ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
-                    query.whereMatches("name", c.getString(nameIndex), "i");
-                    query.findInBackground(new FindCallback<ParseObject>() {
-                        @Override
-                        public void done(List<ParseObject> objects, ParseException e) {
-                            if (e == null && objects.size() >0) {
-                                ParseObject object = objects.get(0);
-                                String classification = object.getString("classification");
-                                int id = getResources().getIdentifier(object.getString("equipment").toLowerCase(), "drawable", getPackageName());
-                                Exercise ex = new Exercise(object.getString("name"), id, classification);
-                                recentResults.add(ex);
-                                searchResults.add(ex);
-                                adapter.notifyDataSetChanged();
-                            }
-                        }
-                    });
+                    String name = c.getString(nameIndex);
+                    String JSON = c.getString(logIndex);
+                    JSONObject logObj = new JSONObject(JSON);
+                    JSONArray sets = logObj.getJSONArray("sets");
+                    String details = (sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ " + sets.getJSONObject(0).getInt("load") + "%");
+                    int id = getResources().getIdentifier(logObj.getString("equipment").toLowerCase(), "drawable", getPackageName());
+                    Exercise ex = new Exercise(name, id, details);
+                    recentResults.add(ex);
+                    tabbedAdapter.notifyDataSetChanged();
+
+
+//                    Exercise ex = new Exercise(name, id, details);
+
+//                    ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
+//                    query.whereMatches("name", c.getString(nameIndex), "i");
+//                    query.findInBackground(new FindCallback<ParseObject>() {
+//                        @Override
+//                        public void done(List<ParseObject> objects, ParseException e) {
+//                            if (e == null && objects.size() >0) {
+//                                ParseObject object = objects.get(0);
+//                                String classification = object.getString("classification");
+//                                int id = getResources().getIdentifier(object.getString("equipment").toLowerCase(), "drawable", getPackageName());
+//                                Exercise ex = new Exercise(object.getString("name"), id, classification);
+//                                recentResults.add(ex);
+//                                tabbedAdapter.notifyDataSetChanged();
+//                            }
+//                        }
+//                    });
                     c.moveToNext();
                 }
             }
@@ -116,9 +127,10 @@ public class SearchExerciseActivity extends AppCompatActivity {
 
     public void getSearch(String searchTerm) {
 
-
-        if (searchTerm == "" || searchTerm.length() == 0) {
-            resultsListView.setAdapter(adapter);
+        if (searchTerm == "" || searchTerm.length() == 0 || searchTerm.matches("")) {
+            resultsListView.setAdapter(searchAdapter);
+            searchResults.clear();
+            searchAdapter.notifyDataSetChanged();
         } else {
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
             query.whereMatches("name", searchTerm, "i");
@@ -135,7 +147,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
                             searchResults.add(ex);
                         }
                     }
-                    adapter.notifyDataSetChanged();
+                    searchAdapter.notifyDataSetChanged();
                 }
             });
         }
@@ -151,13 +163,26 @@ public class SearchExerciseActivity extends AppCompatActivity {
         getRecent();
 
         setContentView(R.layout.activity_search_exercise);
+        final ConstraintLayout mainLayout = (ConstraintLayout) findViewById(R.id.mainLayout);
+        final ConstraintLayout searchLayout = (ConstraintLayout) findViewById(R.id.searchLayout);
+
+        ImageView backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         Intent intent = getIntent();
         date = intent.getLongExtra("date", 0);
 
         resultsListView = (ListView) findViewById(R.id.resultsListView);
-        adapter = new ExerciseSearchResultAdapter(getApplicationContext(), searchResults);
-        resultsListView.setAdapter(adapter);
+        tabbedResultsListView = (ListView) findViewById(R.id.tabbedResultsListView);
+        searchAdapter = new ExerciseSearchResultAdapter(getApplicationContext(), searchResults);
+        tabbedAdapter = new ExerciseSearchResultAdapter(getApplicationContext(), recentResults);
+        resultsListView.setAdapter(searchAdapter);
+        tabbedResultsListView.setAdapter(tabbedAdapter);
 
         favouritesTextView = (TextView) findViewById(R.id.favouritesTextView);
         recentTextView = (TextView) findViewById(R.id.recentTextView);
@@ -181,7 +206,14 @@ public class SearchExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                getSearch(s.toString());
+                if (s.toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "EMPTY", Toast.LENGTH_SHORT).show();
+                    searchResults.clear();
+                    searchAdapter.notifyDataSetChanged();
+                } else {
+                    getSearch(s.toString());
+
+                }
             }
         });
         final ConstraintLayout searchBarLayout = (ConstraintLayout) findViewById(R.id.searchBarLayout);
@@ -195,6 +227,8 @@ public class SearchExerciseActivity extends AppCompatActivity {
                     titleBar.animate().y(-100).setDuration(200);
                     ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
                     searchImageView.setImageResource(R.drawable.arrow_back_nav_black);
+                    mainLayout.setVisibility(View.INVISIBLE);
+                    searchLayout.setVisibility(View.VISIBLE);
                     searchImageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -205,6 +239,8 @@ public class SearchExerciseActivity extends AppCompatActivity {
                             searchImageView.setImageResource(R.drawable.search_black);
                             InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                            mainLayout.setVisibility(View.VISIBLE);
+                            searchLayout.setVisibility(View.INVISIBLE);
                             searchEditText.clearFocus();
                         }
 
@@ -214,7 +250,19 @@ public class SearchExerciseActivity extends AppCompatActivity {
         });
 
 
+        tabbedResultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                Intent intent = new Intent(getApplicationContext(), ExerciseDetailActivity.class);
+
+                // TODO: fix when favourites
+                intent.putExtra("name", recentResults.get(position).getName());
+
+                intent.putExtra("date", date);
+                startActivity(intent);
+            }
+        });
 
         resultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

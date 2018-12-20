@@ -6,27 +6,25 @@ public class Exercise {
     String id;
     String name;
     String target;
+    String equipment;
     int imageId;
     String classification;
-    ArrayList<String> details;
+    String details;
 
     public Exercise(String name, int imageId) {
         this.name = name;
         this.imageId = imageId;
     }
-
-    public Exercise(String name, int imageId, String classification) {
+    public Exercise(String name, int imageId, String classification, String equipment) {
         this.name = name;
         this.imageId = imageId;
         this.classification = classification;
+        this.equipment = equipment;
     }
 
-    public Exercise(String id, String name, String target, int imageId, String classficiation, ArrayList<String> details) {
-        this.id = id;
+    public Exercise(String name, int imageId, String details) {
         this.name = name;
-        this.target = target;
         this.imageId = imageId;
-        this.classification = classification;
         this.details = details;
     }
 
@@ -36,6 +34,9 @@ public class Exercise {
     public int getImageId() {
         return imageId;
     }
-    public String getDetails() { return classification; }
+    public String getDetails() { return details; }
+    public String getTarget() { return target; }
+    public String getEquipment() { return equipment; }
+    public String getClassification() { return classification; }
 
 }

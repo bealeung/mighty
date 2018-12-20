@@ -991,6 +991,7 @@ id checkbox
 id chronometer
 id classic
 id collapseActionView
+id constraintLayout
 id contact
 id container_all
 id container_current
@@ -1071,13 +1072,13 @@ id letterTextView
 id light
 id line1
 id line3
-id linearLayout
 id listMode
 id list_item
 id loadTextView
 id loading_indicator
 id logLinearLayout
 id logo_only
+id mainLayout
 id mainScrollView
 id main_container
 id match_global_nicknames
@@ -1136,6 +1137,7 @@ id scrollView
 id searchBarLayout
 id searchEditText
 id searchImageView
+id searchLayout
 id searchName
 id search_badge
 id search_bar
@@ -1184,6 +1186,7 @@ id subtitle
 id subtitle_view
 id tabMode
 id tab_host
+id tabbedResultsListView
 id tabsLinearLayout
 id terrain
 id test
