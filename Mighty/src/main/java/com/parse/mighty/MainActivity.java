@@ -35,15 +35,24 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout workoutLinearLayout;
     SQLiteDatabase logDatabase;
+    SQLiteDatabase recordsDatabase;
     JSONObject currLogs = new JSONObject();
     Date currDate;
     SimpleDateFormat curFormatter = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat df = new DecimalFormat("###.##");
+    HashMap<Integer, Double> repPercentageMap = new HashMap<>();
+
+
+    // https://www.brianmac.co.uk/maxload.htm
+    public double estimateRM (double weight, int reps) {
+        return weight/( 1.0278 - ( 0.0278 * reps ) );
+    }
 
 
     public void prevDay (View v) {
@@ -64,19 +73,37 @@ public class MainActivity extends AppCompatActivity {
         populateWorkout();
     }
 
+    public int getRepMax(String name) {
+        int repMax= 0;
+        try {
+            Cursor c = recordsDatabase.rawQuery("SELECT * FROM records WHERE exercise = '" + name + "' ORDER BY repMax DESC", null);
+            if (c.moveToNext()) {
+                int rmIndex = c.getColumnIndex("repMax");
+                repMax = c.getInt(rmIndex);
+                Log.i("REP MAX", String.valueOf(repMax));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return repMax;
+    }
 
-    public void showSets(View v) {
+
+    public void showSets(View v, final String name) {
         final String childId = v.getTag().toString();
         Log.i("Show sets with child ID", childId);
         View logView = workoutLinearLayout.getChildAt(Integer.valueOf(childId));
         LinearLayout logLinearLayout = (LinearLayout) logView.findViewById(R.id.logLinearLayout);
         ImageView showSetsButton = (ImageView) logView.findViewById(R.id.showSetsButton);
 
+        int repMax = getRepMax(name);
+
         Log.i("number children", String.valueOf(logLinearLayout.getChildCount()));
         int numChildren = logLinearLayout.getChildCount();
         final String id = logView.getTag().toString();
         if (numChildren == 1) {
             try {
+                // GET CURR RECORD
                 Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE id =" + id, null);
                 if (c != null) {
                     c.moveToFirst();
@@ -98,11 +125,51 @@ public class MainActivity extends AppCompatActivity {
                         final TextView repsTextView = (TextView) setView.findViewById(R.id.repsTextView);
                         final TextView loadTextView = (TextView) setView.findViewById(R.id.loadTextView);
                         final EditText weightEditText = (EditText) setView.findViewById(R.id.enterWeightEditText);
-                        repsTextView.setText(String.valueOf(currSet.getInt("reps")) + " reps");
+                        weightEditText.setHint(String.valueOf(repMax));
+                        final int reps = currSet.getInt("reps");
+                        repsTextView.setText(String.valueOf(reps) + " reps");
                         loadTextView.setText(displaySetLoad(currSet));
                         if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
                             weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
                         }
+                        weightEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                            @Override
+                            public void onFocusChange(View view, boolean b) {
+                                String weightValue = weightEditText.getText().toString();
+                                if (!weightValue.matches("") && reps <=10 && !b) {
+                                    int logId = Integer.valueOf(childId);
+                                    Double repMaxDouble = estimateRM(Double.valueOf(weightValue), reps );
+                                    int currRepMax = repMaxDouble.intValue();
+                                    Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE id = " + id, null);
+                                    if (c.moveToNext()) {
+                                        int idIndex = c.getColumnIndex("recordId");
+                                        int setIndex = c.getColumnIndex("recordSet");
+                                        int recordId = c.getInt(idIndex);
+                                        int recordSet = c.getInt(setIndex);
+                                        if (recordId != -1 && setId == recordSet) {
+                                            recordsDatabase.execSQL("DELETE FROM records WHERE id = " + recordId);
+                                        }
+                                    }
+                                    if (currRepMax >= getRepMax(name)) {
+
+                                        ContentValues values = new ContentValues();
+                                        values.put("date",currDate.getTime());
+                                        values.put("exercise",name);
+                                        values.put("logId", logId);
+                                        values.put("repMax", currRepMax);
+                                        values.put("numReps", reps);
+                                        int recordId = (int) recordsDatabase.insert("Records", null, values);
+                                        ContentValues cv = new ContentValues();
+                                        cv.put("recordId", recordId);
+                                        cv.put("recordSet", setId);
+                                        logDatabase.update("logs", cv, "id=" + id, null);
+                                        Log.i("NEW RECORD LOG ID", String.valueOf(id));
+
+                                        Log.i("REPMAX", String.valueOf(currRepMax));
+                                    }
+                                }
+                            }
+                        });
                         weightEditText.addTextChangedListener(new TextWatcher() {
                             @Override
                             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -256,7 +323,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     detailsTextView.setVisibility(View.GONE);
-                    showSets(v);
+                    showSets(v, name);
                 }
             });
 
@@ -377,6 +444,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
+        recordsDatabase = this.openOrCreateDatabase("Records", MODE_PRIVATE, null);
 
 
         Intent intent = getIntent();
@@ -391,8 +459,12 @@ public class MainActivity extends AppCompatActivity {
         updateDateDisplay();
 
 //        logDatabase.execSQL("DROP TABLE IF EXISTS logs");
+        recordsDatabase.execSQL("DROP TABLE IF EXISTS records");
+        logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date INTEGER, name VARCHAR, log VARCHAR, recordIdid INTEGER PRIMARY KEY)");
 
-        logDatabase.execSQL("CREATE TABLE IF NOT EXISTS logs (date INTEGER, name VARCHAR, log VARCHAR, id INTEGER PRIMARY KEY)");
+        recordsDatabase.execSQL("CREATE TABLE IF NOT EXISTS records (date INTEGER, exercise VARCHAR, logID INTEGER, repMax INTEGER, numReps INTEGER, id INTEGER PRIMARY KEY)");
+//        logDatabase.execSQL("ALTER TABLE logs ADD COLUMN recordSet INTEGER DEFAULT -1");
+
         String newLog = intent.getStringExtra("log");
         if (newLog != null) {
             addLogToDatabase(newLog);

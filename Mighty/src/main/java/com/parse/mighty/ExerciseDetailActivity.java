@@ -113,7 +113,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter
                 .createFromResource(this, R.array.load_types,
-                        android.R.layout.simple_spinner_item);
+                        R.layout.dropdown_spinner);
 
 
         adapter

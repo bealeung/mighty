@@ -480,10 +480,10 @@ public final class R {
         public static final int cast_mini_controller = 0x7f0b001f;
         public static final int cast_tracks_chooser_dialog_layout = 0x7f0b0020;
         public static final int cast_tracks_chooser_dialog_row_layout = 0x7f0b0021;
-        public static final int place_autocomplete_fragment = 0x7f0b002f;
-        public static final int place_autocomplete_item_powered_by_google = 0x7f0b0030;
-        public static final int place_autocomplete_item_prediction = 0x7f0b0031;
-        public static final int place_autocomplete_progress = 0x7f0b0032;
+        public static final int place_autocomplete_fragment = 0x7f0b0030;
+        public static final int place_autocomplete_item_powered_by_google = 0x7f0b0031;
+        public static final int place_autocomplete_item_prediction = 0x7f0b0032;
+        public static final int place_autocomplete_progress = 0x7f0b0033;
     }
     public static final class raw {
         private raw() {}

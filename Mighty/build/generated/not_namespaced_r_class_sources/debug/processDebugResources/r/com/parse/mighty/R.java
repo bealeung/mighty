@@ -24,6 +24,7 @@ public final class R {
     public static final int cast_expanded_controller_default_control_buttons=0x7f020000;
     public static final int cast_mini_controller_default_control_buttons=0x7f020001;
     public static final int load_types=0x7f020002;
+    public static final int rep_percentage=0x7f020003;
   }
   public static final class attr {
     /**
@@ -3781,28 +3782,29 @@ public final class R {
     public static final int cast_tracks_chooser_dialog_layout=0x7f0b0020;
     public static final int cast_tracks_chooser_dialog_row_layout=0x7f0b0021;
     public static final int dropdown_item=0x7f0b0022;
-    public static final int log_listview=0x7f0b0023;
-    public static final int mr_media_route_chooser_dialog=0x7f0b0024;
-    public static final int mr_media_route_controller_material_dialog_b=0x7f0b0025;
-    public static final int mr_media_route_list_item=0x7f0b0026;
-    public static final int notification_media_action=0x7f0b0027;
-    public static final int notification_media_cancel_action=0x7f0b0028;
-    public static final int notification_template_big_media=0x7f0b0029;
-    public static final int notification_template_big_media_narrow=0x7f0b002a;
-    public static final int notification_template_lines=0x7f0b002b;
-    public static final int notification_template_media=0x7f0b002c;
-    public static final int notification_template_part_chronometer=0x7f0b002d;
-    public static final int notification_template_part_time=0x7f0b002e;
-    public static final int place_autocomplete_fragment=0x7f0b002f;
-    public static final int place_autocomplete_item_powered_by_google=0x7f0b0030;
-    public static final int place_autocomplete_item_prediction=0x7f0b0031;
-    public static final int place_autocomplete_progress=0x7f0b0032;
-    public static final int search_listview=0x7f0b0033;
-    public static final int select_dialog_item_material=0x7f0b0034;
-    public static final int select_dialog_multichoice_material=0x7f0b0035;
-    public static final int select_dialog_singlechoice_material=0x7f0b0036;
-    public static final int set_listview=0x7f0b0037;
-    public static final int support_simple_spinner_dropdown_item=0x7f0b0038;
+    public static final int dropdown_spinner=0x7f0b0023;
+    public static final int log_listview=0x7f0b0024;
+    public static final int mr_media_route_chooser_dialog=0x7f0b0025;
+    public static final int mr_media_route_controller_material_dialog_b=0x7f0b0026;
+    public static final int mr_media_route_list_item=0x7f0b0027;
+    public static final int notification_media_action=0x7f0b0028;
+    public static final int notification_media_cancel_action=0x7f0b0029;
+    public static final int notification_template_big_media=0x7f0b002a;
+    public static final int notification_template_big_media_narrow=0x7f0b002b;
+    public static final int notification_template_lines=0x7f0b002c;
+    public static final int notification_template_media=0x7f0b002d;
+    public static final int notification_template_part_chronometer=0x7f0b002e;
+    public static final int notification_template_part_time=0x7f0b002f;
+    public static final int place_autocomplete_fragment=0x7f0b0030;
+    public static final int place_autocomplete_item_powered_by_google=0x7f0b0031;
+    public static final int place_autocomplete_item_prediction=0x7f0b0032;
+    public static final int place_autocomplete_progress=0x7f0b0033;
+    public static final int search_listview=0x7f0b0034;
+    public static final int select_dialog_item_material=0x7f0b0035;
+    public static final int select_dialog_multichoice_material=0x7f0b0036;
+    public static final int select_dialog_singlechoice_material=0x7f0b0037;
+    public static final int set_listview=0x7f0b0038;
+    public static final int support_simple_spinner_dropdown_item=0x7f0b0039;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0c0000;

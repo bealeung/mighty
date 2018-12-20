@@ -34,11 +34,12 @@
 
     <ImageView
         android:id="@+id/backButton"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
         android:src="@drawable/arrow_back_white"
+        app:layout_constraintBottom_toBottomOf="@id/titleBarColour"
+
         app:layout_constraintStart_toStartOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
 
@@ -46,26 +47,26 @@
     <TextView
         android:id="@+id/exerciseNameTextView"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="24dp"
 
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/industry_demi"
         android:gravity="center_vertical"
         android:text="Exercise Name"
         android:textColor="@color/cast_expanded_controller_text_color"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/titleBarColour"
         app:layout_constraintStart_toEndOf="@id/backButton"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
 
     <ImageView
         android:id="@+id/favouriteButton"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="13dp"
         android:src="@drawable/favourite_outline_white"
+        app:layout_constraintBottom_toBottomOf="@id/titleBarColour"
         app:layout_constraintEnd_toEndOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
 
@@ -95,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Sets"
                 android:inputType="number"
                 android:textColor="@color/cast_expanded_controller_background_color"
@@ -109,6 +111,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Reps"
                 android:inputType="number"
                 android:textSize="18sp"
@@ -117,11 +120,12 @@
 
             <EditText
                 android:id="@+id/loadEditText"
-                android:layout_width="75dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Load"
                 android:inputType="numberDecimal"
                 android:textSize="18sp"
@@ -151,7 +155,10 @@
                     android:background="?attr/editTextBackground"
                     android:ems="10"
                     android:focusable="false"
+                    android:fontFamily="sans-serif"
                     android:text="% RM"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/transparent"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -285,24 +292,24 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/addConstraint"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="40dp"
         android:onClick="addExercise"
         app:layout_constraintEnd_toEndOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/redCircleImageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/circle_red" />
 
         <ImageView
             android:id="@+id/whiteTickImageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:padding="10dp"
             android:src="@drawable/tick_white" />
 
