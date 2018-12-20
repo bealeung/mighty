@@ -12,6 +12,7 @@ public class ExerciseLog implements Serializable {
     String exerciseClassification;
     String exerciseEquipment;
     String exerciseTargetMuscle;
+    String setType;
     ArrayList<Set> sets;
 
     public ExerciseLog (String id, String name, String classification, String equipment, String target) {
@@ -23,14 +24,11 @@ public class ExerciseLog implements Serializable {
         sets = new ArrayList<>();
     }
 
-    public void addSet(int reps, int percentage) {
-        Set s = new Set(reps, percentage, "percentage");
-        sets.add(s);
-    }
-    public void addSets (int num, int reps, int percentage) {
+
+    public void addSets (int num, int reps, double load, String type) {
         int count = 0;
         while (count < num) {
-            Set s = new Set(reps, percentage, "percentage");
+            Set s = new Set(reps, load, type);
             sets.add(s);
             count++;
         }
@@ -62,6 +60,7 @@ public class ExerciseLog implements Serializable {
                 JSONObject set = new JSONObject();
                 set.put("reps", s.getReps());
                 set.put("load", s.getLoad());
+                set.put("type", s.getLoadType());
                 if (s.getCompleted() != -1) {
                     set.put("completed", s.getCompleted());
 

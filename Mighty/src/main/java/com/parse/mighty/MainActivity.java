@@ -156,6 +156,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public String getDetails(JSONArray sets ) {
+        try {
+            String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ ";
+            if (sets.getJSONObject(0).has("load")) {
+                details += sets.getJSONObject(0).getDouble("load");
+                details += " " + sets.getJSONObject(0).getString("type");
+            }
+            return details;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
 
     public void addLogView(final String name, String JSON, int logId) {
         try {
@@ -184,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
             letterTextView.setText(String.valueOf((char) (65+childId)));
             // TODO: fix hardcoding rep from first set
-            detailsTextView.setText(sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ " + sets.getJSONObject(0).getInt("load") + "%");
+            detailsTextView.setText(getDetails(sets));
             View clayout = logView.findViewById(R.id.exerciseConstraintLayout);
             clayout.setTag(childId);
             clayout.setOnClickListener(new View.OnClickListener() {

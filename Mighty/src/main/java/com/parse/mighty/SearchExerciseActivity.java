@@ -78,6 +78,20 @@ public class SearchExerciseActivity extends AppCompatActivity {
         tabbedResultsListView.setAdapter(tabbedAdapter);
     }
 
+
+    public String getDetails(JSONArray sets ) {
+        try {
+            String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ ";
+            if (sets.getJSONObject(0).has("load")) {
+                details += sets.getJSONObject(0).getDouble("load");
+                details += " " + sets.getJSONObject(0).getString("type");
+            }
+            return details;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
     public void getRecent() {
         try {
             Cursor c = logDatabase.rawQuery("SELECT * FROM logs ORDER BY date DESC LIMIT 10", null);
@@ -92,30 +106,11 @@ public class SearchExerciseActivity extends AppCompatActivity {
                     String JSON = c.getString(logIndex);
                     JSONObject logObj = new JSONObject(JSON);
                     JSONArray sets = logObj.getJSONArray("sets");
-                    String details = (sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ " + sets.getJSONObject(0).getInt("load") + "%");
+
                     int id = getResources().getIdentifier(logObj.getString("equipment").toLowerCase(), "drawable", getPackageName());
-                    Exercise ex = new Exercise(name, id, details);
+                    Exercise ex = new Exercise(name, id, getDetails(sets));
                     recentResults.add(ex);
                     tabbedAdapter.notifyDataSetChanged();
-
-
-//                    Exercise ex = new Exercise(name, id, details);
-
-//                    ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
-//                    query.whereMatches("name", c.getString(nameIndex), "i");
-//                    query.findInBackground(new FindCallback<ParseObject>() {
-//                        @Override
-//                        public void done(List<ParseObject> objects, ParseException e) {
-//                            if (e == null && objects.size() >0) {
-//                                ParseObject object = objects.get(0);
-//                                String classification = object.getString("classification");
-//                                int id = getResources().getIdentifier(object.getString("equipment").toLowerCase(), "drawable", getPackageName());
-//                                Exercise ex = new Exercise(object.getString("name"), id, classification);
-//                                recentResults.add(ex);
-//                                tabbedAdapter.notifyDataSetChanged();
-//                            }
-//                        }
-//                    });
                     c.moveToNext();
                 }
             }

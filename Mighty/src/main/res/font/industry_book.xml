@@ -3,6 +3,6 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="300"
-        android:font="@font/industry_book_font" />
+        android:font="@font/industry_medium_font" />
 
 </font-family>

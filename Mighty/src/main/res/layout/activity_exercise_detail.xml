@@ -6,59 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".ExerciseDetailActivity">
 
-    <ImageView
-        android:id="@+id/icon2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/circle_red" />
+    <!--<ImageView-->
+        <!--android:id="@+id/icon2"-->
+        <!--android:layout_width="35dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:src="@drawable/circle_red" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/titleBarColour"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@color/Main_Blue" />-->
+
 
     <ImageView
         android:id="@+id/titleBarColour"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="75dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/Main_Blue" />
 
     <ImageView
         android:id="@+id/backButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/arrow_back_white"
         app:layout_constraintStart_toStartOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
 
+
+    <TextView
+        android:id="@+id/exerciseNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/industry_demi"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.2"
+        android:text="Exercise Name"
+        android:textColor="@color/cast_expanded_controller_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/titleBarColour" />
+
     <ImageView
         android:id="@+id/favouriteButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="2dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="13dp"
         android:src="@drawable/favourite_outline_white"
         app:layout_constraintEnd_toEndOf="@id/titleBarColour"
         app:layout_constraintTop_toTopOf="@id/titleBarColour" />
 
-    <TextView
-        android:id="@+id/exerciseNameTextView"
-        android:layout_width="249dp"
-        android:layout_height="30dp"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center_vertical"
-        android:text="Exercise Name"
-        android:textColor="@color/cast_expanded_controller_text_color"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/favouriteButton"
-        app:layout_constraintStart_toEndOf="@id/backButton"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/setSelectionLayout"
@@ -74,7 +85,7 @@
             android:layout_height="wrap_content"
             android:background="@color/cast_expanded_controller_progress_text_color"
             android:orientation="horizontal"
-            android:padding="20dp"
+            android:padding="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent">
@@ -83,11 +94,12 @@
                 android:id="@+id/setsEditText"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="5dp"
                 android:ems="10"
                 android:hint="Sets"
                 android:inputType="number"
                 android:textColor="@color/cast_expanded_controller_background_color"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="80dp" />
 
@@ -95,24 +107,68 @@
                 android:id="@+id/repsEditText"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Reps"
                 android:inputType="number"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="80dp" />
 
             <EditText
-                android:id="@+id/percentageEditText"
+                android:id="@+id/loadEditText"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="% RM"
-                android:inputType="number"
+                android:hint="Load"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="80dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/dropDownConstraint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/dynamic_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/loadTypeSelector"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="?attr/editTextBackground"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:text="% RM"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/dropDownImageView"-->
+                <!--android:layout_width="15dp"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:layout_marginEnd="5dp"-->
+                <!--android:onClick="dropDown"-->
+                <!--android:src="@drawable/arrow_dropdown_black"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+            </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
@@ -232,7 +288,7 @@
         android:id="@+id/addConstraint"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
         android:onClick="addExercise"
         app:layout_constraintEnd_toEndOf="@id/titleBarColour"

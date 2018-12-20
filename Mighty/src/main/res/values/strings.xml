@@ -10,4 +10,10 @@
 
     <string name="app_name">Mighty</string>
 
+    <string-array name="load_types">
+        <item>% RM</item>
+        <item>kg</item>
+        <item>RM</item>
+    </string-array>
+
 </resources>

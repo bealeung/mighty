@@ -5,28 +5,25 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="METHOD_ADDED"
     plugin-version="3.2.1"
-    timestamp="1545264096609"
+    timestamp="1545268681198"
     token="-2325061347358321373"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="319" />
+        duration="298" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="52" />
+        duration="57" />
     <task
         name="verifier"
-        duration="5" />
+        duration="10" />
 
-    <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
@@ -78,8 +75,11 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1545208043600"
+        timestamp="1545268027094"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
@@ -89,8 +89,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1545263975477"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1545268266677"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -98,12 +98,9 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1545264096609"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1545268681198"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />

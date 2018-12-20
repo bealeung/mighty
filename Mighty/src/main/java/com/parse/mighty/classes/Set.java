@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class Set implements Serializable {
     int reps;
-    int load;
+    double load;
     String loadType;
     int completed;
 
-    public Set (int reps, int load, String loadType) {
+    public Set (int reps, double load, String loadType) {
         this.reps = reps;
         this.load = load;
         this.loadType = loadType;
@@ -18,7 +18,7 @@ public class Set implements Serializable {
     public int getReps() {
         return reps;
     }
-    public int getLoad() {
+    public double getLoad() {
         return load;
     }
     public String getLoadType() { return loadType; };

@@ -12,6 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef3bcb99-a917-4daf-8a55-dc767d17536b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Mighty/src/main/res/drawable/arrow_dropdown_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mighty/src/main/res/font/industry_medium_font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mighty/src/main/res/layout/dropdown_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -27,16 +30,31 @@
       <change beforePath="$PROJECT_DIR$/Mighty/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/google/android/gms/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/google/android/gms/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/parse/mighty/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/parse/mighty/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/constraint/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/constraint/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/android/support/v7/mediarouter/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$layout.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseDetailActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseDetailActivity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseDetailActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseDetailActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseSearchResultAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/ExerciseSearchResultAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$array.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$array.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$attr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$bool.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$bool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$color.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$dimen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$id.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$integer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$integer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$layout.class" afterDir="false" />
@@ -45,27 +63,38 @@
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/SearchExerciseActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/Exercise.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/ExerciseLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/ExerciseLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/Set.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/classes/Set.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_1/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_1/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_9/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_9/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/processInstantRunDebugResourcesApk/package_resources-debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/processInstantRunDebugResourcesApk/package_resources-debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/constraint/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/constraint/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/appcompat/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/mediarouter/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/google/android/gms/R$layout.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseDetailActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseDetailActivity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseDetailActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseDetailActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseSearchResultAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/ExerciseSearchResultAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$array.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$array.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$attr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$bool.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$bool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$color.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$dimen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$id.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$integer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$integer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$layout.class" afterDir="false" />
@@ -74,15 +103,12 @@
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/SearchExerciseActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/Exercise.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/ExerciseLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/ExerciseLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/Set.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/classes/Set.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_activity_search_exercise.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_activity_search_exercise.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_log_listview.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_log_listview.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_activity_exercise_detail.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/layout_activity_exercise_detail.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk" afterDir="false" />
@@ -90,20 +116,32 @@
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/1/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/1/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/5/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/5/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/6/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/6/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/9/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/9/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/__content__.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/constraint/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/constraint/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/appcompat/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/android/support/v7/mediarouter/R$layout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/google/android/gms/R$layout.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseDetailActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseDetailActivity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseDetailActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseDetailActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseSearchResultAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/ExerciseSearchResultAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$array.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$array.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$attr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$bool.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$bool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$color.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$dimen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$id.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$integer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$integer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$layout.class" afterDir="false" />
@@ -112,20 +150,17 @@
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/SearchExerciseActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/Exercise.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/ExerciseLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/ExerciseLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/Set.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/classes/Set.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/src/main/res/layout/log_listview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/res/layout/log_listview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,158 +182,125 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8512931">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/AndroidManifest.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="166">
-                  <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-manifest">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Set.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchExerciseActivity.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
-                  <folding>
-                    <element signature="e#4252#4265#0" expanded="true" />
-                    <element signature="e#4518#5341#0" expanded="true" />
-                    <element signature="e#5340#5341#0" expanded="true" />
-                    <element signature="e#5942#6084#0" expanded="true" />
-                    <element signature="e#6083#6084#0" expanded="true" />
-                    <element signature="e#7929#9733#0" expanded="true" />
-                    <element signature="e#8658#9689#0" expanded="true" />
-                    <element signature="e#9688#9689#0" expanded="true" />
-                    <element signature="e#9732#9733#0" expanded="true" />
-                    <element signature="e#9791#10237#0" expanded="true" />
-                    <element signature="e#10236#10237#0" expanded="true" />
-                    <element signature="e#10288#10734#0" expanded="true" />
-                    <element signature="e#10733#10734#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExerciseSearchResultAdapter.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseSearchResultAdapter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-52">
-                  <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExerciseDetailActivity.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Exercise.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExerciseLog.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="251" column="18" lean-forward="true" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
-                  <folding>
-                    <marker date="1545263435057" expanded="true" signature="13014:13071" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_main.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="21" column="53" selection-start-line="21" selection-end-line="22" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer2">
-                <state />
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="311" column="23" selection-start-line="311" selection-end-line="312" />
-                  <folding>
-                    <marker date="1545263435057" expanded="true" signature="13014:13071" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="activity_search_exercise.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="45" column="64" selection-start-line="30" selection-start-column="3" selection-end-line="45" selection-end-column="64" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExerciseDetailActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+              <folding>
+                <element signature="e#3390#3532#0" expanded="true" />
+                <element signature="e#3531#3532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExerciseLog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="158" selection-start-line="158" selection-end-line="170" selection-end-column="5" />
+              <folding>
+                <marker date="1545268554316" expanded="true" signature="13418:13475" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_exercise_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExerciseSearchResultAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseSearchResultAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchExerciseActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+              <folding>
+                <element signature="e#6919#7061#0" expanded="true" />
+                <element signature="e#7060#7061#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parse</find>
-      <find>main_re</find>
-      <find>EXERCI</find>
-      <find>edit</find>
-      <find>searchbarlay</find>
-      <find>populate</find>
       <find>by lift</find>
       <find>logdatabase</find>
       <find>openorc</find>
@@ -320,9 +322,15 @@
       <find>resultslist</find>
       <find>getresu</find>
       <find>detail</find>
-      <find>cursor</find>
       <find>tabbedadapter</find>
       <find>matches</find>
+      <find>cursor</find>
+      <find>finish</find>
+      <find>loadtype</find>
+      <find>%</find>
+      <find>percentage</find>
+      <find>details</find>
+      <find>percent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2621,31 +2629,32 @@
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/MainActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/classes/ExerciseLog.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/mighty/classes/ExerciseLog.java" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Mighty/build.gradle" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseRecord.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/drawable/red_cursor.xml" />
         <option value="$PROJECT_DIR$/Mighty/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/parse/mighty/R.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/font/industry.xml" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/font/industry_demi.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/font/aaux.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/drawable/border_grey.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/set_listview.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseSearchResultAdapter.java" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/search_listview.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/log_listview.xml" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/search_listview.xml" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/dropdown_item.xml" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java" />
+        <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java" />
         <option value="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java" />
       </list>
     </option>
@@ -2694,7 +2703,19 @@
               <item name="App" type="1abcf292:AndroidViewProjectNode" />
               <item name="Mighty" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="font" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Mighty" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Mighty" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="App" type="1abcf292:AndroidViewProjectNode" />
@@ -2725,8 +2746,8 @@
       <recent name="com.parse.starter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Mighty/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/Mighty/src/main/res/font" />
+      <recent name="$PROJECT_DIR$/Mighty/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/Mighty/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/ParseStarterProject/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout" />
@@ -2869,7 +2890,7 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Preview" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.33793104" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Logcat" order="4" />
@@ -2902,36 +2923,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
-          <folding>
-            <marker date="1545263435057" expanded="true" signature="13014:13071" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
@@ -3019,13 +3010,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseRecord.java" />
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/widget/EditText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -3076,13 +3060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/font/aaux_regular.ttf">
       <provider selected="true" editor-type-id="fontseditor">
         <state />
@@ -3121,16 +3098,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/views/ExerciseLogView.java" />
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseLogAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/set_listview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -3153,16 +3120,6 @@
         <state relative-caret-position="240">
           <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/search_listview.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_main.xml">
@@ -3195,54 +3152,76 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml">
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/search_listview.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java">
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_search_exercise.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="45" column="64" selection-start-line="30" selection-start-column="3" selection-end-line="45" selection-end-column="64" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/platforms/android-27/data/res/layout/simple_spinner_dropdown_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/font/industry_book.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/dropdown_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="251" column="18" lean-forward="true" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
-          <folding>
-            <marker date="1545263435057" expanded="true" signature="13014:13071" ph="..." />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Exercise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseSearchResultAdapter.java">
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/ExerciseLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="252">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3251,29 +3230,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
+        <state relative-caret-position="471">
+          <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+          <folding>
+            <element signature="e#3390#3532#0" expanded="true" />
+            <element signature="e#3531#3532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/classes/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/ExerciseSearchResultAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/SearchExerciseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+        <state relative-caret-position="288">
+          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
           <folding>
-            <element signature="e#4252#4265#0" expanded="true" />
-            <element signature="e#4518#5341#0" expanded="true" />
-            <element signature="e#5340#5341#0" expanded="true" />
-            <element signature="e#5942#6084#0" expanded="true" />
-            <element signature="e#6083#6084#0" expanded="true" />
-            <element signature="e#7929#9733#0" expanded="true" />
-            <element signature="e#8658#9689#0" expanded="true" />
-            <element signature="e#9688#9689#0" expanded="true" />
-            <element signature="e#9732#9733#0" expanded="true" />
-            <element signature="e#9791#10237#0" expanded="true" />
-            <element signature="e#10236#10237#0" expanded="true" />
-            <element signature="e#10288#10734#0" expanded="true" />
-            <element signature="e#10733#10734#0" expanded="true" />
+            <element signature="e#6919#7061#0" expanded="true" />
+            <element signature="e#7060#7061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/activity_exercise_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="158" selection-start-line="158" selection-end-line="170" selection-end-column="5" />
+          <folding>
+            <marker date="1545268554316" expanded="true" signature="13418:13475" ph="..." />
           </folding>
         </state>
       </provider>

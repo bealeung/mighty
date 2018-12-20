@@ -5,7 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,17 +38,26 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         return ret;
     }
 
+    public double getDouble(TextView t) {
+        double ret = -1;
+        if (!t.getText().toString().matches("")) {
+            ret = Double.valueOf(t.getText().toString());
+        }
+        return ret;
+    }
+
 
     public void addExercise (View view) {
         EditText setsText = (EditText) findViewById(R.id.setsEditText);
         EditText repsText = (EditText) findViewById(R.id.repsEditText);
-        EditText percentageText = (EditText) findViewById(R.id.percentageEditText);
+        EditText loadText = (EditText) findViewById(R.id.loadEditText);
+        TextView loadType = (TextView) findViewById(R.id.loadTypeSelector);
         Log.i("empty", String.valueOf(setsText.getText().toString().trim().length()));
         if (setsText.getText().toString().trim().length() == 0 || repsText.getText().toString().trim().length() == 0) {
             Toast.makeText(this, "You must enter a value for sets and reps", Toast.LENGTH_SHORT).show();
         } else {
             ExerciseLog log = new ExerciseLog(exId, exName, ex.getClassification(), ex.getEquipment(), ex.getTarget());
-            log.addSets(getInt(setsText), getInt(repsText), getInt(percentageText));
+            log.addSets(getInt(setsText), getInt(repsText), getDouble(loadText), loadType.getText().toString());
             try {
                 Log.i("JSON", log.toJSONString());
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -70,6 +83,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         TextView exerciseNameTextView = (TextView) findViewById(R.id.exerciseNameTextView);
         exerciseNameTextView.setText(exName);
+        final TextView loadSelector = (TextView) findViewById(R.id.loadTypeSelector);
 
         // GET EXERCISE DETAILS
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Exercise");
@@ -82,6 +96,42 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                     ex = new Exercise(object.getString("name"), id, object.getString("classification"), object.getString("equipment"));
                     exId = object.getObjectId();
                 }
+            }
+        });
+
+
+        ImageView backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        Spinner dynamicSpinner = (Spinner) findViewById(R.id.dynamic_spinner);
+
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter
+                .createFromResource(this, R.array.load_types,
+                        android.R.layout.simple_spinner_item);
+
+
+        adapter
+                .setDropDownViewResource(R.layout.dropdown_item);
+
+        dynamicSpinner.setAdapter(adapter);
+
+        dynamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                Log.v("item", (String) parent.getItemAtPosition(position));
+                loadSelector.setText(parent.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
             }
         });
 
