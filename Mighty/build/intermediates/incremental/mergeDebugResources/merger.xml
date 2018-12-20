@@ -1558,6 +1558,7 @@
         <item name="colorAccent">@color/Main_Red</item>
         <item name="android:fontFamily">@font/industry_book_font</item>
         <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowSoftInputMode">adjustNothing</item>
         <item name="android:statusBarColor">@color/Main_Blue</item>
     </style></file><file path="/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Mighty</string><string-array name="load_types">
         <item>% RM</item>
