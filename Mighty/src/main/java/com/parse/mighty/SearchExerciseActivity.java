@@ -28,6 +28,7 @@ import com.parse.mighty.classes.Exercise;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +46,8 @@ public class SearchExerciseActivity extends AppCompatActivity {
     ImageView favouritesUnderline;
     ImageView recentUnderline;
     SQLiteDatabase logDatabase;
+    DecimalFormat df = new DecimalFormat("###.##");
+
 
     long date;
     String currTab;
@@ -74,6 +77,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
         recentUnderline.setVisibility(View.VISIBLE);
         favouritesUnderline.setVisibility(View.INVISIBLE);
         currTab = "recent";
+        Log.i("RECENT TAB", String.valueOf(recentResults.size()));
         tabbedAdapter = new ExerciseSearchResultAdapter(getApplicationContext(), recentResults);
         tabbedResultsListView.setAdapter(tabbedAdapter);
     }
@@ -83,7 +87,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
         try {
             String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ ";
             if (sets.getJSONObject(0).has("load")) {
-                details += sets.getJSONObject(0).getDouble("load");
+                details += df.format(sets.getJSONObject(0).getDouble("load"));
                 details += " " + sets.getJSONObject(0).getString("type");
             }
             return details;
@@ -99,6 +103,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
                 c.moveToFirst();
                 int nameIndex = c.getColumnIndex("name");
                 int logIndex = c.getColumnIndex("log");
+                Log.i("GETTING RECENT", "hi");
 
                 while (c != null) {
                     Log.i("EXERCISE NAME ", c.getString(nameIndex));
@@ -110,7 +115,8 @@ public class SearchExerciseActivity extends AppCompatActivity {
                     int id = getResources().getIdentifier(logObj.getString("equipment").toLowerCase(), "drawable", getPackageName());
                     Exercise ex = new Exercise(name, id, getDetails(sets));
                     recentResults.add(ex);
-                    tabbedAdapter.notifyDataSetChanged();
+                    Log.i("numm", "hi");
+
                     c.moveToNext();
                 }
             }

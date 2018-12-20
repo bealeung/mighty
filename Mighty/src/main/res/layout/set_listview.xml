@@ -83,14 +83,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:paddingEnd="20dp"
+            android:paddingEnd="15dp"
             android:text="@string/load_measurement"
 
             android:textColor="@color/Black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/setConstraint"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteY="10dp" />
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
 

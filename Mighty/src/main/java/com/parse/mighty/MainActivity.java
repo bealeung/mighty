@@ -134,9 +134,32 @@ public class MainActivity extends AppCompatActivity {
                         loadTextView.setText(displaySetLoad(currSet));
 
 
-                        double percentage = repPercentageArray[reps-1];
+                        String hint = "0";
+                        if (currSet.has("load") && currSet.getDouble("load") != -1) {
+                            String type = currSet.getString("type");
+                            Double load = currSet.getDouble("load");
+                            Log.i("HAS LOAD", type);
 
-                        weightEditText.setHint(String.valueOf(df.format(repMax*percentage/100)));
+                            if (type.matches("kg")) {
+                                hint = String.valueOf(df.format(load));
+                            } else if (type.matches("%RM")) {
+                                hint = String.valueOf(df.format(repMax*load/100));
+                            } else if (type.matches("RM")) {
+                                if (load <= 12) {
+                                    double percentage = repPercentageArray[load.intValue()-1];
+                                    hint = String.valueOf(df.format(repMax*percentage/100));
+                                }
+                            }
+                            Log.i("HINT", hint);
+
+                        } else {
+                            if (reps <= 12) {
+                                double percentage = repPercentageArray[reps-1];
+                                hint = String.valueOf(df.format(repMax*percentage/100));
+                            }
+                        }
+                        weightEditText.setHint(hint);
+
 
                         if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
                             weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
@@ -145,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onFocusChange(View view, boolean b) {
                                 String weightValue = weightEditText.getText().toString();
-                                if (!weightValue.matches("") && reps <=10 && !b) {
+                                if (!weightValue.matches("") && reps <= 12 && !b) {
                                     int logId = Integer.valueOf(childId);
                                     Double repMaxDouble = estimateRM(Double.valueOf(weightValue), reps );
                                     int currRepMax = repMaxDouble.intValue();
@@ -263,8 +286,12 @@ public class MainActivity extends AppCompatActivity {
         String ret = "";
         try {
             if (currSet.has("load")) {
-                ret = String.valueOf(df.format(currSet.getDouble("load")));
-                ret += " " + currSet.getString("type");
+                if (currSet.getDouble("load") == -1) {
+                    ret = "-";
+                } else {
+                    ret = String.valueOf(df.format(currSet.getDouble("load")));
+                    ret += " " + currSet.getString("type");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -274,10 +301,9 @@ public class MainActivity extends AppCompatActivity {
 
     public String getDetails(JSONArray sets ) {
         try {
-            String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps") + " @ ";
-            if (sets.getJSONObject(0).has("load")) {
-
-                details += df.format(sets.getJSONObject(0).getDouble("load"));
+            String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps");
+            if (sets.getJSONObject(0).has("load") && sets.getJSONObject(0).getDouble("load") != -1) {
+                details +=  " @ " + df.format(sets.getJSONObject(0).getDouble("load"));
                 details += " " + sets.getJSONObject(0).getString("type");
             }
             return details;
