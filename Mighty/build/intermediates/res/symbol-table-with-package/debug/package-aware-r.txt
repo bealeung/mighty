@@ -716,14 +716,17 @@ drawable arrow_forward_black
 drawable arrow_forward_ios_white
 drawable arrow_foward_white
 drawable arrow_up_black
+drawable back
 drawable barbell
 drawable bench
 drawable biceps
 drawable blue_oval
 drawable bodyweight
 drawable border_grey
+drawable bottom_nav
 drawable button_add
 drawable cable
+drawable calendar_black
 drawable calendar_white
 drawable calves
 drawable cast_album_art_placeholder
@@ -817,7 +820,6 @@ drawable common_plus_signin_btn_text_light_focused
 drawable common_plus_signin_btn_text_light_normal
 drawable common_plus_signin_btn_text_light_pressed
 drawable deadlift
-drawable deltoids
 drawable dumbbell
 drawable expand_less_red
 drawable expand_more_red
@@ -912,6 +914,7 @@ drawable quantum_ic_volume_mute_white_36
 drawable quantum_ic_volume_off_grey600_36
 drawable quantum_ic_volume_off_white_36
 drawable search_black
+drawable shoulders
 drawable squat
 drawable tick_white
 drawable triceps
@@ -963,6 +966,7 @@ id benchImageView
 id blueOvalImageView
 id book_now
 id bottom
+id bottomNav
 id button
 id buttonPanel
 id button_0

@@ -18,7 +18,9 @@
         android:id="@+id/mainScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+
+        android:scrollbars="none"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +30,11 @@
             android:id="@+id/workoutLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:layout_marginTop="50dp"
+            android:paddingBottom="110dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:scrollbarStyle="outsideOverlay"></LinearLayout>
     </ScrollView>
 
     <ImageView
@@ -109,13 +115,23 @@
         android:id="@+id/addButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:onClick="addExercise"
-        android:src="@drawable/button_add" />
+        android:src="@drawable/button_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:onClick="addExercise"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

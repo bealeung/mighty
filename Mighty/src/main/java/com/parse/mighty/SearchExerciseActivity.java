@@ -112,7 +112,7 @@ public class SearchExerciseActivity extends AppCompatActivity {
                     JSONObject logObj = new JSONObject(JSON);
                     JSONArray sets = logObj.getJSONArray("sets");
 
-                    int id = getResources().getIdentifier(logObj.getString("equipment").toLowerCase(), "drawable", getPackageName());
+                    int id = getResources().getIdentifier(logObj.getString("equipment").toLowerCase().replace(" ", "_"), "drawable", getPackageName());
                     Exercise ex = new Exercise(name, id, getDetails(sets));
                     recentResults.add(ex);
                     Log.i("numm", "hi");

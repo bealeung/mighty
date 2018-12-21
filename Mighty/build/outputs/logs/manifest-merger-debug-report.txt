@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
 MERGED from [com.google.android.gms:play-services:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-9.4.0.aar/e0a73c500b820456119f5ce976f73b81/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-9.4.0.aar/2c909afe79e406472cdf499e86660c31/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-cast:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-9.4.0.aar/bbb5a7bd0f9fcfee776d218b14c9cddf/AndroidManifest.xml:16:1-20:12
@@ -60,20 +60,20 @@ MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/beatrixleu
 MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/c5567e0fce9a932c8e11c7224bf207a6/AndroidManifest.xml:16:1-26:12
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-23.4.0.aar/cb5061ed42d845751677ba05f5a70d13/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/support-v4-23.4.0.aar/221b800eeb10e14d715dc48d1c955b18/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
-INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
+INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
 	package
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:10:5-31
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-38:12
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:1-37:12
 		INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:9:11-69
@@ -136,7 +136,7 @@ ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManif
 	android:name
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:15:22-76
 application
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:17:5-36:19
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:17:5-35:19
 MERGED from [com.google.android.gms:play-services:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-9.4.0.aar/e0a73c500b820456119f5ce976f73b81/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-9.4.0.aar/e0a73c500b820456119f5ce976f73b81/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-9.4.0.aar/2c909afe79e406472cdf499e86660c31/AndroidManifest.xml:5:5-9:19
@@ -231,8 +231,6 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/
 MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/support-v4-23.4.0.aar/221b800eeb10e14d715dc48d1c955b18/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:21:9-41
-	android:windowSoftInputMode
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:23:9-52
 	android:icon
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
@@ -242,29 +240,29 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/beatrixleung/.gradle/
 	android:name
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:18:9-59
 activity#com.parse.mighty.MainActivity
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:25:9-33:20
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:24:9-32:20
 	android:label
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:27:13-45
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:26:13-45
 	android:name
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:26:13-57
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:25:13-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:28:13-32:29
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:29:17-69
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:31:17-77
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:31:27-74
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:30:27-74
 activity#com.parse.mighty.SearchExerciseActivity
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:34:9-76
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:33:9-76
+	android:name
+		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:33:19-73
+activity#com.parse.mighty.ExerciseDetailActivity
+ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:34:9-85
 	android:name
 		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:34:19-73
-activity#com.parse.mighty.ExerciseDetailActivity
-ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:35:9-85
-	android:name
-		ADDED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml:35:19-73
 uses-sdk
 INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/AndroidManifest.xml
