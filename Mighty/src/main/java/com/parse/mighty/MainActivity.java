@@ -482,7 +482,6 @@ public class MainActivity extends AppCompatActivity {
         logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
         recordsDatabase = this.openOrCreateDatabase("Records", MODE_PRIVATE, null);
 
-
         Intent intent = getIntent();
 
         long date = intent.getLongExtra("date", 0);

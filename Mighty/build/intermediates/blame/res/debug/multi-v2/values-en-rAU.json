@@ -4,7 +4,7 @@
             "outputFile": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/cb1b5062b329ad34082e737e7252edfa/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/e60346e0c655ce7be2979d05ff08d7ab/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.4.0.aar/3820b13429b510343d0055cd46891101/res/values-en-rAU/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "292",
-                        "endColumns": "103",
-                        "endOffsets": "391"
-                    },
-                    "to": {
-                        "startLines": "33",
-                        "startColumns": "4",
-                        "startOffsets": "3210",
-                        "endColumns": "103",
-                        "endOffsets": "3309"
-                    }
-                },
-                {
-                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/5751524a97b4afddff0fde550e0942cd/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/43f9d5459b929106514a25f21e0ae510/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "55,159,267,390,490,598,682,782,897,974,1050,1132,1235,1339,1438,1543,1646,1750,1869,3109",
                         "endColumns": "103,107,122,99,107,83,99,114,76,75,81,102,103,98,104,102,103,118,99,100",
                         "endOffsets": "154,262,385,485,593,677,777,892,969,1045,1127,1230,1334,1433,1538,1641,1745,1864,1964,3205"
+                    }
+                },
+                {
+                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.4.0.aar/11cdd56b0d0886a01a7e13a7b2f906d2/res/values-en-rAU/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "292",
+                        "endColumns": "103",
+                        "endOffsets": "391"
+                    },
+                    "to": {
+                        "startLines": "33",
+                        "startColumns": "4",
+                        "startOffsets": "3210",
+                        "endColumns": "103",
+                        "endOffsets": "3309"
                     }
                 }
             ]

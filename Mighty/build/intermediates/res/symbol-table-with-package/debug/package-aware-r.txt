@@ -1012,7 +1012,9 @@ id crash_reporting_present
 id custom
 id customPanel
 id dark
+id date
 id dateTextView
+id dayOfWeek
 id deadliftImageView
 id decor_content_parent
 id default_activity_button
@@ -1137,6 +1139,7 @@ id recentTextView
 id recentUnderline
 id redCircleImageView
 id repLayout
+id reps
 id repsEditText
 id repsTextView
 id resultsListView
@@ -1171,6 +1174,7 @@ id selectionDetails
 id setConstraint
 id setIcon
 id setSelectionLayout
+id sets
 id setsEditText
 id settings
 id shortcut
@@ -1276,6 +1280,7 @@ layout cast_tracks_chooser_dialog_layout
 layout cast_tracks_chooser_dialog_row_layout
 layout dropdown_item
 layout dropdown_spinner
+layout history_listview
 layout log_listview
 layout mr_media_route_chooser_dialog
 layout mr_media_route_controller_material_dialog_b

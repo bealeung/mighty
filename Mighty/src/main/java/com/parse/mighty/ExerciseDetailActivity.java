@@ -1,14 +1,18 @@
 package com.parse.mighty;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,15 +24,27 @@ import com.parse.ParseQuery;
 import com.parse.mighty.classes.Exercise;
 import com.parse.mighty.classes.ExerciseLog;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class ExerciseDetailActivity extends AppCompatActivity {
+
+    SQLiteDatabase logDatabase;
+
 
     Exercise ex;
     String exName;
     String exId;
     long date;
+
+    LinearLayout detailsLayout;
 
     public int getInt(TextView t) {
         int ret = 0;
@@ -71,15 +87,112 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
     }
 
+    public static String getFormattedDate(Date date){
+        Calendar cal=Calendar.getInstance();
+        cal.setTime(date);
+        //2nd of march 2015
+        int day=cal.get(Calendar.DATE);
+
+        if(!((day>10) && (day<19)))
+            switch (day % 10) {
+                case 1:
+                    return new SimpleDateFormat("d'st' 'of' MMMM yyyy").format(date);
+                case 2:
+                    return new SimpleDateFormat("d'nd' 'of' MMMM yyyy").format(date);
+                case 3:
+                    return new SimpleDateFormat("d'rd' 'of' MMMM yyyy").format(date);
+                default:
+                    return new SimpleDateFormat("d'th' 'of' MMMM yyyy").format(date);
+            }
+        return new SimpleDateFormat("d'th' 'of' MMMM yyyy").format(date);
+    }
+
+    public void addHistory(Date date, JSONObject log) {
+        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+        final View historyView = inflater.inflate(R.layout.history_listview, null);
+        final TextView dayOfWeekTextView = (TextView) historyView.findViewById(R.id.dayOfWeek);
+        final TextView dateTextView = (TextView) historyView.findViewById(R.id.date);
+        final TextView setsTextView = (TextView) historyView.findViewById(R.id.sets);
+        final TextView repsTextView = (TextView) historyView.findViewById(R.id.reps);
+
+        try {
+            JSONArray sets = log.getJSONArray("sets");
+            dayOfWeekTextView.setText(new SimpleDateFormat("EEEE").format(date));
+            dateTextView.setText(getFormattedDate(date));
+            setsTextView.setText(sets.length() + " sets");
+
+            int totalReps = 0, totalCompleted = 0, count = 0;
+
+
+            for (int i = 0; i < sets.length(); i++) {
+                JSONObject set = sets.getJSONObject(i);
+                if(set.has("completed")) {
+                    totalReps += set.getInt("reps");
+                    totalCompleted += set.getDouble("completed");
+                    count++;
+                }
+            }
+            repsTextView.setText(String.valueOf(totalReps/count) + " reps / " + String.valueOf(totalCompleted/count));
+
+            detailsLayout.addView(historyView);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+    public void getHistory() {
+
+        try {
+            Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE name ='" + exName + "'", null);
+            c.moveToFirst();
+
+            int dateIndex = c.getColumnIndex("date");
+            int nameIndex = c.getColumnIndex("name");
+            int idIndex = c.getColumnIndex("id");
+            int logIndex = c.getColumnIndex("log");
+            while (c != null) {
+                String name = c.getString(nameIndex);
+                String logJSONString = c.getString(logIndex);
+                Date date = new Date(c.getLong(dateIndex));
+
+                JSONObject json = new JSONObject(logJSONString);
+
+                Log.i("DATE", getFormattedDate(date));
+
+                Log.i("LOG", json.toString());
+
+                int logId = c.getInt(idIndex);
+
+                addHistory(date, json);
+                c.moveToNext();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_detail);
+        
+        detailsLayout = (LinearLayout) findViewById(R.id.exerciseDetailsLayout);
+
+
+        logDatabase = this.openOrCreateDatabase("Logs", MODE_PRIVATE, null);
+
 
         Intent intent = getIntent();
 
         exName = intent.getStringExtra("name");
         date = intent.getLongExtra("date", 0);
+        getHistory();
 
         TextView exerciseNameTextView = (TextView) findViewById(R.id.exerciseNameTextView);
         exerciseNameTextView.setText(exName);

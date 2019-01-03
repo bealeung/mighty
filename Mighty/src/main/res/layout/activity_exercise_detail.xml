@@ -183,6 +183,36 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/historySelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/industry_demi"
+                    android:gravity="center"
+                    android:text="History"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    tools:typeface="normal" />
+
+                <ImageView
+                    android:id="@+id/historyUnderline"
+                    android:layout_width="25dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    app:srcCompat="@color/Main_Red" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -195,8 +225,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Exercise Info"
-                    android:textColor="@color/cast_expanded_controller_background_color"
-                    android:textStyle="bold"
                     tools:typeface="normal" />
 
                 <ImageView
@@ -205,34 +233,8 @@
                     android:layout_height="2dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    app:srcCompat="@color/Main_Red" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/historySelector"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="History"
-                    tools:typeface="normal" />
-
-                <ImageView
-                    android:id="@+id/historyUnderline"
-                    android:layout_width="25dp"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
                     android:visibility="invisible"
                     app:srcCompat="@color/Main_Red" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -263,7 +265,7 @@
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:id="@+id/exerciseDetailsLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -271,10 +273,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+
         app:layout_constraintTop_toBottomOf="@id/exerciseDetailsSelectors">
 
-    </android.support.constraint.ConstraintLayout>
-
+    </LinearLayout>
     <android.support.constraint.ConstraintLayout
         android:id="@+id/addConstraint"
         android:layout_width="40dp"

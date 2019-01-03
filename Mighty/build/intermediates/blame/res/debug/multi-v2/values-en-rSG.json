@@ -4,7 +4,7 @@
             "outputFile": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rSG/values-en-rSG.xml",
             "map": [
                 {
-                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.4.0.aar/3820b13429b510343d0055cd46891101/res/values-en-rSG/values.xml",
+                    "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-wallet-9.4.0.aar/11cdd56b0d0886a01a7e13a7b2f906d2/res/values-en-rSG/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
