@@ -15,25 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef3bcb99-a917-4daf-8a55-dc767d17536b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental-verifier/debug/com/parse/mighty/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/parse/mighty/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/6/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/dexMerger/debug/6/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/build/intermediates/transforms/instantRun/debug/0/com/parse/mighty/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +41,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="447" column="52" lean-forward="true" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
+            <state relative-caret-position="135">
+              <caret line="280" column="36" selection-start-line="280" selection-start-column="35" selection-end-line="280" selection-end-column="36" />
               <folding>
                 <element signature="e#12849#14920#0" expanded="true" />
                 <element signature="e#13499#14684#0" expanded="true" />
@@ -69,7 +50,7 @@
                 <element signature="e#14919#14920#0" expanded="true" />
                 <element signature="e#16405#16818#0" expanded="true" />
                 <element signature="e#16817#16818#0" expanded="true" />
-                <marker date="1546505526727" expanded="true" signature="29702:29759" ph="..." />
+                <marker date="1546506123685" expanded="true" signature="29758:29815" ph="..." />
               </folding>
             </state>
           </provider>
@@ -81,18 +62,6 @@
             <state relative-caret-position="135">
               <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log_listview.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/log_listview.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -155,9 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>order by</find>
-      <find>loadtextvi</find>
-      <find>work</find>
       <find>df</find>
       <find>click</find>
       <find>repstext</find>
@@ -179,12 +145,15 @@
       <find>you must</find>
       <find>loadtextview</find>
       <find>history</find>
-      <find>showsets</find>
       <find>number of</find>
       <find>detailsTextview</find>
       <find>update</find>
       <find>UPDATE</find>
+      <find>logLinearLayout</find>
+      <find>logview</find>
       <find>cv</find>
+      <find>showsets</find>
+      <find>showSets</find>
     </findStrings>
     <replaceStrings>
       <replace>historyView</replace>
@@ -2742,14 +2711,14 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Preview" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.34068966" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.34068966" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32965517" />
       <window_info anchor="bottom" id="Logcat" order="4" weight="0.32965517" />
       <window_info id="Captures" order="7" weight="0.25" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.24959612" />
       <window_info anchor="bottom" id="Build" order="0" weight="0.2786207" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32965517" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -3073,16 +3042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/set_listview.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="57" column="56" selection-start-line="30" selection-end-line="57" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/history_listview.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -3130,10 +3089,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Mighty/src/main/res/layout/set_listview.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="57" column="56" selection-start-line="30" selection-end-line="57" selection-end-column="56" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mighty/src/main/java/com/parse/mighty/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="447" column="52" lean-forward="true" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
+        <state relative-caret-position="135">
+          <caret line="280" column="36" selection-start-line="280" selection-start-column="35" selection-end-line="280" selection-end-column="36" />
           <folding>
             <element signature="e#12849#14920#0" expanded="true" />
             <element signature="e#13499#14684#0" expanded="true" />
@@ -3141,7 +3110,7 @@
             <element signature="e#14919#14920#0" expanded="true" />
             <element signature="e#16405#16818#0" expanded="true" />
             <element signature="e#16817#16818#0" expanded="true" />
-            <marker date="1546505526727" expanded="true" signature="29702:29759" ph="..." />
+            <marker date="1546506123685" expanded="true" signature="29758:29815" ph="..." />
           </folding>
         </state>
       </provider>

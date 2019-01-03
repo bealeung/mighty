@@ -128,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void showSets(View v, final String name) {
-        final String childId = v.getTag().toString();
+    public void showSets(final String childId, final String name) {
+//        final String childId = v.getTag().toString();
         Log.i("Show sets with child ID", childId);
         View logView = workoutLinearLayout.getChildAt(Integer.valueOf(childId));
         final LinearLayout logLinearLayout = (LinearLayout) logView.findViewById(R.id.logLinearLayout);
@@ -352,6 +352,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(View view) {
                             addSet(id, logObj, Integer.valueOf(repsEditText.getText().toString()), Double.valueOf(loadEditText.getText().toString()));
                             logLinearLayout.removeViews(1, logLinearLayout.getChildCount()-1);
+                            showSets(childId, name);
                         }
                     });
                     logLinearLayout.addView(totalView);
@@ -527,7 +528,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     detailsTextView.setVisibility(View.GONE);
-                    showSets(v, name);
+                    showSets(v.getTag().toString(), name);
                 }
             });
 
