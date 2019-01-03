@@ -284,6 +284,42 @@ public class MainActivity extends AppCompatActivity {
                         });
 
 
+                        setView.setOnLongClickListener(new View.OnLongClickListener() {
+                            @Override
+                            public boolean onLongClick(View view) {
+                                Log.i("Long click!", view.getTag().toString());
+                                final int childId = Integer.parseInt(view.getTag().toString());
+                                final LinearLayout child = (LinearLayout) logLinearLayout.getChildAt(childId);
+                                    new AlertDialog.Builder(MainActivity.this)
+                                            .setMessage("Delete this set?")
+                                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+                                                    try {
+
+                                                        sets.remove(childId);
+                                                        logObj.put("sets", sets);
+                                                        ContentValues cv = new ContentValues();
+                                                        cv.put("log", logObj.toString());
+                                                        logDatabase.update("logs", cv, "id=" + id, null);
+
+
+                                                        logLinearLayout.removeView(child);
+                                                        relabelSets(logLinearLayout);
+                                                    } catch (Exception e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+                                            })
+                                            .setNegativeButton("Cancel", null)
+                                            .show();
+
+
+                                return true;
+                            }
+                        });
+
+
                         setView.setTag(setId);
                         logLinearLayout.addView(setView);
 
@@ -404,6 +440,15 @@ public class MainActivity extends AppCompatActivity {
             View child = workoutLinearLayout.getChildAt(i);
             final TextView letterTextView = (TextView) child.findViewById(R.id.letterTextView);
             letterTextView.setText(String.valueOf((char) (65+i)));
+
+        }
+    }
+
+    public void relabelSets(LinearLayout logLinearLayout) {
+        for (int i = 0; i < logLinearLayout.getChildCount(); i++) {
+            View child = logLinearLayout.getChildAt(i);
+            final TextView childId = (TextView) child.findViewById(R.id.childId);
+            childId.setText(String.valueOf(i));
 
         }
     }
