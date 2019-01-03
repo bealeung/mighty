@@ -69,11 +69,13 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         EditText loadText = (EditText) findViewById(R.id.loadEditText);
         TextView loadType = (TextView) findViewById(R.id.loadTypeSelector);
         Log.i("empty", String.valueOf(setsText.getText().toString().trim().length()));
-        if (setsText.getText().toString().trim().length() == 0 || repsText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You must enter a value for sets and reps", Toast.LENGTH_SHORT).show();
-        } else {
-            ExerciseLog log = new ExerciseLog(exId, exName, ex.getClassification(), ex.getEquipment(), ex.getTarget());
+//            Toast.makeText(this, "You must enter a value for sets and reps", Toast.LENGTH_SHORT).show();
+//        } else {
+        ExerciseLog log = new ExerciseLog(exId, exName, ex.getClassification(), ex.getEquipment(), ex.getTarget());
+        if (!(setsText.getText().toString().trim().length() == 0 || repsText.getText().toString().trim().length() == 0)) {
+
             log.addSets(getInt(setsText), getInt(repsText), getDouble(loadText), loadType.getText().toString());
+        }
             try {
                 Log.i("JSON", log.toJSONString());
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -83,7 +85,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
+//        }
 
     }
 
@@ -119,22 +121,26 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             JSONArray sets = log.getJSONArray("sets");
             dayOfWeekTextView.setText(new SimpleDateFormat("EEEE").format(date));
             dateTextView.setText(getFormattedDate(date));
-            setsTextView.setText(sets.length() + " sets");
 
             int totalReps = 0, totalCompleted = 0, count = 0;
 
 
             for (int i = 0; i < sets.length(); i++) {
                 JSONObject set = sets.getJSONObject(i);
-                if(set.has("completed")) {
+                if(set.has("completed") && set.getDouble("completed") > 0) {
                     totalReps += set.getInt("reps");
                     totalCompleted += set.getDouble("completed");
                     count++;
                 }
             }
-            repsTextView.setText(String.valueOf(totalReps/count) + " reps / " + String.valueOf(totalCompleted/count));
+            if (count >0) {
+                setsTextView.setText(count + " sets");
 
-            detailsLayout.addView(historyView);
+                repsTextView.setText(String.valueOf(totalReps/count) + " reps / " + String.valueOf(totalCompleted/count) + getResources().getString(R.string.load_measurement));
+
+                detailsLayout.addView(historyView);
+            }
+
 
 
         } catch (Exception e) {
@@ -148,7 +154,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     public void getHistory() {
 
         try {
-            Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE name ='" + exName + "'", null);
+            Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE name ='" + exName + "' ORDER BY date DESC", null);
             c.moveToFirst();
 
             int dateIndex = c.getColumnIndex("date");

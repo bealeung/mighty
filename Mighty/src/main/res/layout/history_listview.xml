@@ -12,7 +12,7 @@
         android:id="@+id/setConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="12dp">
 
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:paddingStart="50dp"
+            android:paddingStart="20dp"
             android:paddingEnd="40dp"
             android:text="Wednesday"
             android:textSize="12sp"
@@ -37,7 +37,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:paddingStart="50dp"
+            android:paddingStart="20dp"
             android:paddingEnd="40dp"
             android:text="January 2nd 2019"
             android:textSize="10sp"
@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:paddingStart="200dp"
+            android:paddingStart="180dp"
             android:paddingEnd="40dp"
             android:text="2 sets"
             android:textColor="@color/Black"
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:paddingStart="200dp"
+            android:paddingStart="180dp"
             android:paddingEnd="40dp"
             android:text="20 reps / 3kg"
             android:textSize="10sp"

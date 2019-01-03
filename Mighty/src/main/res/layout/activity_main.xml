@@ -122,18 +122,179 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/bottomNav"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:onClick="addExercise"
-        android:scaleType="fitXY"
-        android:src="@drawable/bottom_nav"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottomNavConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/bottomNavBackground"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bottom_nav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+ />
+
+        <LinearLayout
+            android:id="@+id/bottomNavLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/logLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                app:layout_constraintEnd_toStartOf="@id/logLayout">
+
+                <ImageView
+                    android:id="@+id/logImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/logTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/log_selected" />
+
+                <TextView
+                    android:id="@+id/logTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/industry_demi"
+                    android:text="Log"
+
+                    android:textColor="@color/Main_Blue"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logImageView" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/statsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/statsImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/statsTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/stats_unselected" />
+
+                <TextView
+                    android:id="@+id/statsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/industry_demi"
+                    android:text="Stats"
+
+                    android:textColor="@color/Main_Blue"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/statsImageView" />
+            </android.support.constraint.ConstraintLayout>
 
 
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/programsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/programsImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/programsTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/programs_unselected" />
+
+                <TextView
+                    android:id="@+id/programsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/industry_demi"
+                    android:text="Stats"
+
+                    android:textColor="@color/Main_Blue"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/programsImageView" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/userLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/userImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/userTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/user_unselected" />
+
+                <TextView
+                    android:id="@+id/userTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/industry_demi"
+                    android:text="Stats"
+
+                    android:textColor="@color/Main_Blue"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userImageView" />
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

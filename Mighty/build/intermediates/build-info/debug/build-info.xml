@@ -5,37 +5,25 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="R_CLASS_CHANGE"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1546478378809"
+    timestamp="1546504695230"
     token="-2325061347358321373"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1124" />
+        duration="659" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="90" />
+        duration="60" />
     <task
         name="verifier"
-        duration="31" />
+        duration="9" />
 
-    <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
@@ -87,20 +75,32 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1546478378809"
+        timestamp="1546493519616"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1546495355020"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1546504695230"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />

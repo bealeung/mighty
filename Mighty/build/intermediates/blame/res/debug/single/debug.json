@@ -1628,6 +1628,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/e60346e0c655ce7be2979d05ff08d7ab/res/drawable-mdpi/ic_setting_dark.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/layout_set_total.xml.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/layout/set_total.xml"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/43f9d5459b929106514a25f21e0ae510/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -2026,6 +2030,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_arrow_down_black.png.flat",
         "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/arrow_down_black.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_programs_unselected.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/programs_unselected.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-hdpi_ic_setting_dark.png.flat",
@@ -2440,6 +2448,10 @@
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/play-services-cast-9.4.0.aar/557b3849085b0c6999f1ff7675541db2/res/drawable-xhdpi-v4/cast_ic_notification_on.png"
     },
     {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_log_selected.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/log_selected.png"
+    },
+    {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_media_play.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/e60346e0c655ce7be2979d05ff08d7ab/res/drawable-xxhdpi/ic_media_play.png"
     },
@@ -2642,6 +2654,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/43f9d5459b929106514a25f21e0ae510/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_stats_unselected.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/stats_unselected.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-mdpi-v4_common_plus_signin_btn_text_dark_focused.9.png.flat",
@@ -3838,6 +3854,10 @@
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/Users/beatrixleung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/43f9d5459b929106514a25f21e0ae510/res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable_user_unselected.png.flat",
+        "source": "/Users/beatrixleung/Documents/Mighty/App/Mighty/src/main/res/drawable/user_unselected.png"
     },
     {
         "merged": "/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/res/merged/debug/drawable-xhdpi-v4_powered_by_google_light.png.flat",

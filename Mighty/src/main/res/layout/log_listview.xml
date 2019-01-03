@@ -64,7 +64,8 @@
                     android:fontFamily="@font/industry_demi"
                     android:text="Exercise Name"
                     android:textColor="@color/cast_intro_overlay_background_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/detailsTextView"

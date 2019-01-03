@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/AppTheme"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/setConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_grey"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/addTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/industry_book"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:text="+"
+            android:textColor="@color/Main_Red"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/repsEditText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:hint="20"
+            android:inputType="number"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/loadEditText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:hint="80"
+            android:inputType="numberDecimal"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repsEditText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/volumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/industry_demi"
+            android:gravity="center"
+            android:paddingEnd="15dp"
+            android:text="720kg"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/Main_Red"
+            android:fontFamily="sans-serif"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

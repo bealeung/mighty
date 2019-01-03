@@ -853,6 +853,7 @@ drawable ic_plusone_tall_off_client
 drawable ic_setting_dark
 drawable ic_setting_light
 drawable kettlebell
+drawable log_selected
 drawable machine
 drawable mr_ic_cast_dark
 drawable mr_ic_cast_light
@@ -872,6 +873,7 @@ drawable places_ic_clear
 drawable places_ic_search
 drawable powered_by_google_dark
 drawable powered_by_google_light
+drawable programs_unselected
 drawable quads
 drawable quantum_ic_art_track_grey600_48
 drawable quantum_ic_cast_connected_white_24
@@ -916,9 +918,11 @@ drawable quantum_ic_volume_off_white_36
 drawable search_black
 drawable shoulders
 drawable squat
+drawable stats_unselected
 drawable tick_white
 drawable triceps
 drawable trophy
+drawable user_unselected
 font aaux
 font aaux_regular
 font industry_book
@@ -944,6 +948,7 @@ id action_mode_close_button
 id activity_chooser_view_content
 id addButton
 id addConstraint
+id addTextView
 id adjust_height
 id adjust_width
 id alertTitle
@@ -966,7 +971,9 @@ id benchImageView
 id blueOvalImageView
 id book_now
 id bottom
-id bottomNav
+id bottomNavBackground
+id bottomNavConstraint
+id bottomNavLayout
 id button
 id buttonPanel
 id button_0
@@ -1094,7 +1101,10 @@ id loadMeasurement
 id loadTextView
 id loadTypeSelector
 id loading_indicator
+id logImageView
+id logLayout
 id logLinearLayout
+id logTextView
 id logo_only
 id mainLayout
 id mainScrollView
@@ -1130,6 +1140,9 @@ id place_autocomplete_separator
 id plain
 id play_pause
 id production
+id programsImageView
+id programsLayout
+id programsTextView
 id progressBar
 id progress_circular
 id progress_horizontal
@@ -1194,7 +1207,10 @@ id src_over
 id standard
 id start
 id start_text
+id statsImageView
+id statsLayout
 id statsSelector
+id statsTextView
 id statsUnderline
 id status_bar_latest_event_content
 id status_text
@@ -1230,6 +1246,10 @@ id topPanel
 id up
 id url
 id useLogo
+id userImageView
+id userLayout
+id userTextView
+id volumeTextView
 id whiteTickImageView
 id wide
 id withText
@@ -1302,6 +1322,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout set_listview
+layout set_total
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 raw gtm_analytics

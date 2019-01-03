@@ -20,6 +20,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -75,6 +76,24 @@ public class MainActivity extends AppCompatActivity {
         populateWorkout();
     }
 
+    public void addSet(String id, JSONObject logObj, int reps, double load) {
+        Log.i("ADDING SET","HI");
+        try {
+            final JSONArray sets = logObj.getJSONArray("sets");
+            JSONObject newSet = new JSONObject();
+            newSet.put("reps", reps);
+            newSet.put("completed", load);
+            sets.put(newSet);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ContentValues cv = new ContentValues();
+        cv.put("log", logObj.toString());
+        logDatabase.update("logs", cv, "id=" + id, null);
+    }
+
+
+
     public int getRepMax(String name) {
         int repMax= 0;
         try {
@@ -90,12 +109,30 @@ public class MainActivity extends AppCompatActivity {
         return repMax;
     }
 
+    public void updateTotalVolume(JSONArray sets, TextView textView) {
+        double totalVolume = 0;
+
+        try {
+            for (int i = 0; i < sets.length(); i++) {
+                final JSONObject currSet = sets.getJSONObject(i);
+                final int reps = currSet.getInt("reps");
+                if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
+                    double completedWeight = currSet.getDouble("completed");
+                    totalVolume += completedWeight*reps;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        textView.setText(String.valueOf(df.format(totalVolume)) + " kg");
+    }
+
 
     public void showSets(View v, final String name) {
         final String childId = v.getTag().toString();
         Log.i("Show sets with child ID", childId);
         View logView = workoutLinearLayout.getChildAt(Integer.valueOf(childId));
-        LinearLayout logLinearLayout = (LinearLayout) logView.findViewById(R.id.logLinearLayout);
+        final LinearLayout logLinearLayout = (LinearLayout) logView.findViewById(R.id.logLinearLayout);
         ImageView showSetsButton = (ImageView) logView.findViewById(R.id.showSetsButton);
 
         int repMax = getRepMax(name);
@@ -103,10 +140,15 @@ public class MainActivity extends AppCompatActivity {
         Log.i("number children", String.valueOf(logLinearLayout.getChildCount()));
         int numChildren = logLinearLayout.getChildCount();
         final String id = logView.getTag().toString();
+
+        // If not expanded
         if (numChildren == 1) {
             try {
                 // GET CURR RECORD
                 Cursor c = logDatabase.rawQuery("SELECT * FROM logs WHERE id =" + id, null);
+                if (c == null) {
+                    Log.i("no children!", "booo");
+                }
                 if (c != null) {
                     c.moveToFirst();
                     int logIndex = c.getColumnIndex("log");
@@ -115,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
                     String exId = logObj.getString("id");
                     final JSONArray sets = logObj.getJSONArray("sets");
                     Log.i("Number of sets", String.valueOf(sets.length()));
+
+                    double totalVolume = 0;
 
                     for (int i = 0; i < sets.length(); i++) {
                         final int setId = i;
@@ -132,7 +176,6 @@ public class MainActivity extends AppCompatActivity {
                         final int reps = currSet.getInt("reps");
                         repsTextView.setText(String.valueOf(reps) + " reps");
                         loadTextView.setText(displaySetLoad(currSet));
-
 
                         String hint = "0";
                         if (currSet.has("load") && currSet.getDouble("load") != -1) {
@@ -162,7 +205,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                         if (currSet.has("completed") && currSet.getDouble("completed") != -1) {
-                            weightEditText.setText(String.valueOf(df.format(currSet.getDouble("completed"))));
+                            double completedWeight = currSet.getDouble("completed");
+                            weightEditText.setText(String.valueOf(df.format(completedWeight)));
+                            totalVolume += completedWeight*reps;
                         }
                         weightEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                             @Override
@@ -200,6 +245,8 @@ public class MainActivity extends AppCompatActivity {
                                         Log.i("REPMAX", String.valueOf(currRepMax));
                                     }
                                 }
+                                updateTotalVolume(sets, (TextView) logLinearLayout.findViewById(R.id.volumeTextView));
+
                             }
                         });
                         weightEditText.addTextChangedListener(new TextWatcher() {
@@ -235,10 +282,89 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                         });
+
+
                         setView.setTag(setId);
                         logLinearLayout.addView(setView);
+
+                        if (i == sets.length()-1) {
+
+
+
+                        }
+
                     }
                     showSetsButton.setImageResource(R.drawable.expand_less_red);
+                    // ADD SET TOTAL
+                    LayoutInflater totalInflater = LayoutInflater.from(getApplicationContext());
+                    final View totalView = totalInflater.inflate(R.layout.set_total, null);
+                    final TextView volumeTextView = (TextView) totalView.findViewById(R.id.volumeTextView);
+                    final EditText repsEditText = (EditText) totalView.findViewById(R.id.repsEditText);
+                    final EditText loadEditText = (EditText) totalView.findViewById(R.id.loadEditText);
+                    volumeTextView.setText(String.valueOf(df.format(totalVolume)) + " kg");
+                    if (sets.length() != 0) {
+                        JSONObject lastSet = sets.getJSONObject(sets.length()-1);
+                        if (lastSet.has("completed")) {
+                            loadEditText.setHint(df.format(lastSet.getDouble("completed")));
+                        }
+                        repsEditText.setHint(String.valueOf(lastSet.getInt("reps")));
+                    }
+
+                    final Button addButton = (Button) totalView.findViewById(R.id.addButton);
+                    addButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            addSet(id, logObj, Integer.valueOf(repsEditText.getText().toString()), Double.valueOf(loadEditText.getText().toString()));
+                            logLinearLayout.removeViews(1, logLinearLayout.getChildCount()-1);
+                        }
+                    });
+                    logLinearLayout.addView(totalView);
+
+                    repsEditText.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if (i2 > 0 && loadEditText.getText().toString().length() > 0) {
+                                addButton.setVisibility(View.VISIBLE);
+                                volumeTextView.setVisibility(View.INVISIBLE);
+                            }
+
+                            else if (i2 == 0 || loadEditText.getText().toString().length() == 0) {
+                                addButton.setVisibility(View.GONE);
+                                volumeTextView.setVisibility(View.VISIBLE);
+                            }
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                        }
+                    });
+
+                    loadEditText.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if (i2 > 0 && repsEditText.getText().toString().length() > 0) {
+                                addButton.setVisibility(View.VISIBLE);
+                                volumeTextView.setVisibility(View.INVISIBLE);
+                            }
+
+                            else if (i2 == 0 || repsEditText.getText().toString().length() == 0) {
+                                addButton.setVisibility(View.GONE);
+                                volumeTextView.setVisibility(View.VISIBLE);
+                            }
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                        }
+                    });
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -285,13 +411,11 @@ public class MainActivity extends AppCompatActivity {
     public String displaySetLoad(JSONObject currSet) {
         String ret = "";
         try {
-            if (currSet.has("load")) {
-                if (currSet.getDouble("load") == -1) {
-                    ret = "-";
-                } else {
-                    ret = String.valueOf(df.format(currSet.getDouble("load")));
-                    ret += " " + currSet.getString("type");
-                }
+            if (currSet.has("load") && currSet.getDouble("load") != -1) {
+                ret = String.valueOf(df.format(currSet.getDouble("load")));
+                ret += currSet.getString("type");
+            } else {
+                ret = "-";
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -304,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
             String details = sets.length() + "x" + sets.getJSONObject(0).getInt("reps");
             if (sets.getJSONObject(0).has("load") && sets.getJSONObject(0).getDouble("load") != -1) {
                 details +=  " @ " + df.format(sets.getJSONObject(0).getDouble("load"));
-                details += " " + sets.getJSONObject(0).getString("type");
+                details += sets.getJSONObject(0).getString("type");
             }
             return details;
         } catch (Exception e) {
@@ -328,7 +452,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean isCompleted(JSONArray sets) {
-        if (sets.length() == getNumCompleted(sets)) {
+        if (sets.length()!= 0 && sets.length() == getNumCompleted(sets)) {
             return true;
         }
         return false;
@@ -366,7 +490,12 @@ public class MainActivity extends AppCompatActivity {
 
             letterTextView.setText(String.valueOf((char) (65+childId)));
             // TODO: fix hardcoding rep from first set
-            detailsTextView.setText(getDetails(sets));
+            String details = getDetails(sets);
+            if (details != "") {
+                detailsTextView.setText(getDetails(sets));
+            } else {
+                detailsTextView.setVisibility(View.GONE);
+            }
             View clayout = logView.findViewById(R.id.exerciseConstraintLayout);
             clayout.setTag(childId);
             clayout.setOnClickListener(new View.OnClickListener() {
