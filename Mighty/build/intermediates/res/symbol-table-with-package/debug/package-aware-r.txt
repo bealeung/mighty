@@ -853,7 +853,7 @@ drawable ic_plusone_tall_off_client
 drawable ic_setting_dark
 drawable ic_setting_light
 drawable kettlebell
-drawable log_selected
+drawable log_blue
 drawable machine
 drawable mr_ic_cast_dark
 drawable mr_ic_cast_light
@@ -873,7 +873,7 @@ drawable places_ic_clear
 drawable places_ic_search
 drawable powered_by_google_dark
 drawable powered_by_google_light
-drawable programs_unselected
+drawable program_blue
 drawable quads
 drawable quantum_ic_art_track_grey600_48
 drawable quantum_ic_cast_connected_white_24
@@ -918,11 +918,11 @@ drawable quantum_ic_volume_off_white_36
 drawable search_black
 drawable shoulders
 drawable squat
-drawable stats_unselected
+drawable stats_blue
 drawable tick_white
 drawable triceps
 drawable trophy
-drawable user_unselected
+drawable user_blue
 font aaux
 font aaux_regular
 font industry_book
@@ -1292,6 +1292,8 @@ layout abc_select_dialog_material
 layout activity_exercise_detail
 layout activity_main
 layout activity_search_exercise
+layout activity_stats
+layout bottom_navigation
 layout cast_expanded_controller_activity
 layout cast_help_text
 layout cast_intro_overlay
@@ -1765,6 +1767,7 @@ style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_MediaRouter_Light_MediaRouteButton
 style Widget_MediaRouter_MediaRouteButton
+style noAnimTheme
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetLeft contentInsetRight contentInsetStart customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

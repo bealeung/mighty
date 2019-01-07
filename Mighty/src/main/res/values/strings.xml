@@ -16,7 +16,7 @@
         <item>RM</item>
     </string-array>
     <string name="load_measurement">kg</string>
-    
+
     <integer-array name="rep_percentage">
         <item>100</item>
         <item>95</item>

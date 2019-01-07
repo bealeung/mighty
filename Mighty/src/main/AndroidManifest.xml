@@ -15,23 +15,25 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="com.parse.mighty.StarterApplication"
+        android:name=".StarterApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.parse.mighty.MainActivity"
-            android:label="@string/app_name">
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.parse.mighty.SearchExerciseActivity" />
-        <activity android:name="com.parse.mighty.ExerciseDetailActivity"></activity>
+        <activity android:name=".SearchExerciseActivity" />
+        <activity android:name=".ExerciseDetailActivity" />
+        <activity android:name=".StatsActivity"
+            android:theme="@style/noAnimTheme"></activity>
     </application>
 
 </manifest>

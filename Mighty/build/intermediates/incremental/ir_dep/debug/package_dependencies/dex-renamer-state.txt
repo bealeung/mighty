@@ -1,4 +1,4 @@
-#Thu Jan 03 10:56:27 AEDT 2019
+#Mon Jan 07 15:42:24 AEDT 2019
 base.0=/Users/beatrixleung/Documents/Mighty/App/Mighty/build/intermediates/transforms/dexMerger/debug/10
 path.1=classes2.dex
 renamed.1=classes2.dex

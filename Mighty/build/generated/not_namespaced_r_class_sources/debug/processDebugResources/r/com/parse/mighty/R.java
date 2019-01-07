@@ -1791,7 +1791,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -3356,7 +3356,7 @@ public final class R {
     public static final int ic_setting_dark=0x7f0700dd;
     public static final int ic_setting_light=0x7f0700de;
     public static final int kettlebell=0x7f0700df;
-    public static final int log_selected=0x7f0700e0;
+    public static final int log_blue=0x7f0700e0;
     public static final int machine=0x7f0700e1;
     public static final int mr_ic_cast_dark=0x7f0700e2;
     public static final int mr_ic_cast_light=0x7f0700e3;
@@ -3376,7 +3376,7 @@ public final class R {
     public static final int places_ic_search=0x7f0700f1;
     public static final int powered_by_google_dark=0x7f0700f2;
     public static final int powered_by_google_light=0x7f0700f3;
-    public static final int programs_unselected=0x7f0700f4;
+    public static final int program_blue=0x7f0700f4;
     public static final int quads=0x7f0700f5;
     public static final int quantum_ic_art_track_grey600_48=0x7f0700f6;
     public static final int quantum_ic_cast_connected_white_24=0x7f0700f7;
@@ -3421,11 +3421,11 @@ public final class R {
     public static final int search_black=0x7f07011e;
     public static final int shoulders=0x7f07011f;
     public static final int squat=0x7f070120;
-    public static final int stats_unselected=0x7f070121;
+    public static final int stats_blue=0x7f070121;
     public static final int tick_white=0x7f070122;
     public static final int triceps=0x7f070123;
     public static final int trophy=0x7f070124;
-    public static final int user_unselected=0x7f070125;
+    public static final int user_blue=0x7f070125;
   }
   public static final class font {
     public static final int aaux=0x7f080000;
@@ -3803,38 +3803,40 @@ public final class R {
     public static final int activity_exercise_detail=0x7f0b0019;
     public static final int activity_main=0x7f0b001a;
     public static final int activity_search_exercise=0x7f0b001b;
-    public static final int cast_expanded_controller_activity=0x7f0b001c;
-    public static final int cast_help_text=0x7f0b001d;
-    public static final int cast_intro_overlay=0x7f0b001e;
-    public static final int cast_mini_controller=0x7f0b001f;
-    public static final int cast_tracks_chooser_dialog_layout=0x7f0b0020;
-    public static final int cast_tracks_chooser_dialog_row_layout=0x7f0b0021;
-    public static final int dropdown_item=0x7f0b0022;
-    public static final int dropdown_spinner=0x7f0b0023;
-    public static final int history_listview=0x7f0b0024;
-    public static final int log_listview=0x7f0b0025;
-    public static final int mr_media_route_chooser_dialog=0x7f0b0026;
-    public static final int mr_media_route_controller_material_dialog_b=0x7f0b0027;
-    public static final int mr_media_route_list_item=0x7f0b0028;
-    public static final int notification_media_action=0x7f0b0029;
-    public static final int notification_media_cancel_action=0x7f0b002a;
-    public static final int notification_template_big_media=0x7f0b002b;
-    public static final int notification_template_big_media_narrow=0x7f0b002c;
-    public static final int notification_template_lines=0x7f0b002d;
-    public static final int notification_template_media=0x7f0b002e;
-    public static final int notification_template_part_chronometer=0x7f0b002f;
-    public static final int notification_template_part_time=0x7f0b0030;
-    public static final int place_autocomplete_fragment=0x7f0b0031;
-    public static final int place_autocomplete_item_powered_by_google=0x7f0b0032;
-    public static final int place_autocomplete_item_prediction=0x7f0b0033;
-    public static final int place_autocomplete_progress=0x7f0b0034;
-    public static final int search_listview=0x7f0b0035;
-    public static final int select_dialog_item_material=0x7f0b0036;
-    public static final int select_dialog_multichoice_material=0x7f0b0037;
-    public static final int select_dialog_singlechoice_material=0x7f0b0038;
-    public static final int set_listview=0x7f0b0039;
-    public static final int set_total=0x7f0b003a;
-    public static final int support_simple_spinner_dropdown_item=0x7f0b003b;
+    public static final int activity_stats=0x7f0b001c;
+    public static final int bottom_navigation=0x7f0b001d;
+    public static final int cast_expanded_controller_activity=0x7f0b001e;
+    public static final int cast_help_text=0x7f0b001f;
+    public static final int cast_intro_overlay=0x7f0b0020;
+    public static final int cast_mini_controller=0x7f0b0021;
+    public static final int cast_tracks_chooser_dialog_layout=0x7f0b0022;
+    public static final int cast_tracks_chooser_dialog_row_layout=0x7f0b0023;
+    public static final int dropdown_item=0x7f0b0024;
+    public static final int dropdown_spinner=0x7f0b0025;
+    public static final int history_listview=0x7f0b0026;
+    public static final int log_listview=0x7f0b0027;
+    public static final int mr_media_route_chooser_dialog=0x7f0b0028;
+    public static final int mr_media_route_controller_material_dialog_b=0x7f0b0029;
+    public static final int mr_media_route_list_item=0x7f0b002a;
+    public static final int notification_media_action=0x7f0b002b;
+    public static final int notification_media_cancel_action=0x7f0b002c;
+    public static final int notification_template_big_media=0x7f0b002d;
+    public static final int notification_template_big_media_narrow=0x7f0b002e;
+    public static final int notification_template_lines=0x7f0b002f;
+    public static final int notification_template_media=0x7f0b0030;
+    public static final int notification_template_part_chronometer=0x7f0b0031;
+    public static final int notification_template_part_time=0x7f0b0032;
+    public static final int place_autocomplete_fragment=0x7f0b0033;
+    public static final int place_autocomplete_item_powered_by_google=0x7f0b0034;
+    public static final int place_autocomplete_item_prediction=0x7f0b0035;
+    public static final int place_autocomplete_progress=0x7f0b0036;
+    public static final int search_listview=0x7f0b0037;
+    public static final int select_dialog_item_material=0x7f0b0038;
+    public static final int select_dialog_multichoice_material=0x7f0b0039;
+    public static final int select_dialog_singlechoice_material=0x7f0b003a;
+    public static final int set_listview=0x7f0b003b;
+    public static final int set_total=0x7f0b003c;
+    public static final int support_simple_spinner_dropdown_item=0x7f0b003d;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0c0000;
@@ -4284,6 +4286,7 @@ public final class R {
     public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0f014f;
     public static final int Widget_MediaRouter_Light_MediaRouteButton=0x7f0f0150;
     public static final int Widget_MediaRouter_MediaRouteButton=0x7f0f0151;
+    public static final int noAnimTheme=0x7f0f0152;
   }
   public static final class styleable {
     /**
@@ -8091,7 +8094,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
